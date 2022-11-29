@@ -28,6 +28,7 @@ struct LoginView: View {
                         Image(systemName:"heart.fill")
                             .resizable()
                             .frame(width: 30, height: 30)
+                            .foregroundColor(.red)
                         
                         Text("Cherry")
                             .font(.system(size: 40, weight: .bold))
@@ -154,5 +155,11 @@ struct LoginView: View {
             print(error.localizedDescription)
         }
         return dicData
+    }
+}
+
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView()
     }
 }
