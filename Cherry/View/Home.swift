@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct Home: View {
-    
+    @State var stack = NavigationPath()
     // current index
     @State var currentIndex: Int = 0
     @State var isShowingSheet : Bool = false
@@ -17,6 +17,7 @@ struct Home: View {
     @State var isShowingDetailSheet: Bool = false
     @State var isShowingDeleteAlert: Bool = false
     var body: some View {
+        NavigationStack(path: $stack){
             ZStack {
                 TabView(selection: $currentIndex) {
                     ForEach(posts.indices, id: \.self) { index in
@@ -55,9 +56,9 @@ struct Home: View {
                 }
                 .offset(y: getRect().height / 4)
                 
-//
-//                TopItemView(isShowingCamera: $isShowingCamera, isShowingSheet: $isShowingSheet)
-//                    .position(x:200,y:10)
+                //
+                //                TopItemView(isShowingCamera: $isShowingCamera, isShowingSheet: $isShowingSheet)
+                //                    .position(x:200,y:10)
             }
             .sheet(isPresented: $isShowingSheet,onDismiss: didDismiss) {
                 MyMenuView(isShowingSheet: $isShowingSheet)
@@ -65,6 +66,17 @@ struct Home: View {
             .sheet(isPresented: $isShowingCamera,onDismiss: didDismiss) {
                 CameraQRView(isShowingCamera: $isShowingCamera)
             }
+            
+            HStack{
+                Spacer()
+                NavigationLink(destination: ChoiceNameCardTypeView(stack: $stack)){
+                    Image(systemName: "plus.circle")
+                        .resizable()
+                        .frame(width:50, height: 50)
+                }
+                
+            }.padding(20)
+        }
     }
     @ViewBuilder
     func CardView(post: Post) -> some View {

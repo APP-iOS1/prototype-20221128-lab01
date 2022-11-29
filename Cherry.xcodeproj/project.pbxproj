@@ -14,6 +14,13 @@
 		041764CC2925BD7C0033C3F5 /* WalletButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041764CB2925BD7C0033C3F5 /* WalletButtonView.swift */; };
 		045D11AD29261F2A009B8B3B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D11AC29261F2A009B8B3B /* Post.swift */; };
 		0479BA45292C531100910CD9 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479BA44292C531100910CD9 /* Result.swift */; };
+		049C46462935BDF300B9BEC0 /* ChoiceFrontNamecardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C46452935BDF300B9BEC0 /* ChoiceFrontNamecardView.swift */; };
+		049C46482935BE0D00B9BEC0 /* ChoiceBackNamecardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C46472935BE0D00B9BEC0 /* ChoiceBackNamecardView.swift */; };
+		049C464A2935BE3000B9BEC0 /* ChoiceFrontOnlyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C46492935BE3000B9BEC0 /* ChoiceFrontOnlyImageView.swift */; };
+		049C464C2935BE6E00B9BEC0 /* ChoiceFrontImageNTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C464B2935BE6E00B9BEC0 /* ChoiceFrontImageNTextView.swift */; };
+		049C464E2935BEC100B9BEC0 /* ChoiceBehindDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C464D2935BEC100B9BEC0 /* ChoiceBehindDescriptionView.swift */; };
+		049C46502935BEE900B9BEC0 /* FinalCreatingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C464F2935BEE900B9BEC0 /* FinalCreatingStepView.swift */; };
+		049C46522935C6AE00B9BEC0 /* ChoiceNameCardTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C46512935C6AE00B9BEC0 /* ChoiceNameCardTypeView.swift */; };
 		04AED846292CFD7700CF015C /* FirstSettingNickNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AED845292CFD7700CF015C /* FirstSettingNickNameView.swift */; };
 		04AED848292D00F500CF015C /* FirstSettingSNSLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AED847292D00F500CF015C /* FirstSettingSNSLinkView.swift */; };
 		06365E82291CD48200CF1D3C /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06365E81291CD48200CF1D3C /* testView.swift */; };
@@ -42,6 +49,13 @@
 		041764CB2925BD7C0033C3F5 /* WalletButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletButtonView.swift; sourceTree = "<group>"; };
 		045D11AC29261F2A009B8B3B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0479BA44292C531100910CD9 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		049C46452935BDF300B9BEC0 /* ChoiceFrontNamecardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceFrontNamecardView.swift; sourceTree = "<group>"; };
+		049C46472935BE0D00B9BEC0 /* ChoiceBackNamecardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceBackNamecardView.swift; sourceTree = "<group>"; };
+		049C46492935BE3000B9BEC0 /* ChoiceFrontOnlyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceFrontOnlyImageView.swift; sourceTree = "<group>"; };
+		049C464B2935BE6E00B9BEC0 /* ChoiceFrontImageNTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceFrontImageNTextView.swift; sourceTree = "<group>"; };
+		049C464D2935BEC100B9BEC0 /* ChoiceBehindDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceBehindDescriptionView.swift; sourceTree = "<group>"; };
+		049C464F2935BEE900B9BEC0 /* FinalCreatingStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalCreatingStepView.swift; sourceTree = "<group>"; };
+		049C46512935C6AE00B9BEC0 /* ChoiceNameCardTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceNameCardTypeView.swift; sourceTree = "<group>"; };
 		04AED845292CFD7700CF015C /* FirstSettingNickNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSettingNickNameView.swift; sourceTree = "<group>"; };
 		04AED847292D00F500CF015C /* FirstSettingSNSLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSettingSNSLinkView.swift; sourceTree = "<group>"; };
 		06365E81291CD48200CF1D3C /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
@@ -76,6 +90,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		049C46442935BD8B00B9BEC0 /* AddNameCardViews */ = {
+			isa = PBXGroup;
+			children = (
+				049C46512935C6AE00B9BEC0 /* ChoiceNameCardTypeView.swift */,
+				049C46452935BDF300B9BEC0 /* ChoiceFrontNamecardView.swift */,
+				049C46532935F12D00B9BEC0 /* SinglePage */,
+				049C46542935F15000B9BEC0 /* MultiPage */,
+				049C464F2935BEE900B9BEC0 /* FinalCreatingStepView.swift */,
+			);
+			path = AddNameCardViews;
+			sourceTree = "<group>";
+		};
+		049C46532935F12D00B9BEC0 /* SinglePage */ = {
+			isa = PBXGroup;
+			children = (
+				049C46492935BE3000B9BEC0 /* ChoiceFrontOnlyImageView.swift */,
+				049C464B2935BE6E00B9BEC0 /* ChoiceFrontImageNTextView.swift */,
+			);
+			path = SinglePage;
+			sourceTree = "<group>";
+		};
+		049C46542935F15000B9BEC0 /* MultiPage */ = {
+			isa = PBXGroup;
+			children = (
+				049C46472935BE0D00B9BEC0 /* ChoiceBackNamecardView.swift */,
+				049C464D2935BEC100B9BEC0 /* ChoiceBehindDescriptionView.swift */,
+			);
+			path = MultiPage;
+			sourceTree = "<group>";
+		};
 		04CC29B429266A030038FC5F /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +154,7 @@
 		06B527FA291A290500ACFB0D /* Cherry */ = {
 			isa = PBXGroup;
 			children = (
+				049C46442935BD8B00B9BEC0 /* AddNameCardViews */,
 				06B527FB291A290500ACFB0D /* CherryApp.swift */,
 				06B527FD291A290500ACFB0D /* ContentView.swift */,
 				F38FE17A291A45A100C8F20D /* MyMenuView.swift */,
@@ -248,6 +293,7 @@
 				06B527FE291A290500ACFB0D /* ContentView.swift in Sources */,
 				F350A8A6291B343D00A9B9FF /* Home.swift in Sources */,
 				F350A8AF291B3CFF00A9B9FF /* CameraQRView.swift in Sources */,
+				049C46502935BEE900B9BEC0 /* FinalCreatingStepView.swift in Sources */,
 				2D7FDB60291CC2BB0050AFC4 /* MyPageView.swift in Sources */,
 				0479BA45292C531100910CD9 /* Result.swift in Sources */,
 				04AED846292CFD7700CF015C /* FirstSettingNickNameView.swift in Sources */,
@@ -256,12 +302,18 @@
 				06365E82291CD48200CF1D3C /* testView.swift in Sources */,
 				2D7FDB64291CD0A40050AFC4 /* TempView.swift in Sources */,
 				F38FE17D291A45B400C8F20D /* UsersMenuView.swift in Sources */,
+				049C46482935BE0D00B9BEC0 /* ChoiceBackNamecardView.swift in Sources */,
 				041764CA2925BD700033C3F5 /* LoginView.swift in Sources */,
+				049C464C2935BE6E00B9BEC0 /* ChoiceFrontImageNTextView.swift in Sources */,
 				041764C62925BD390033C3F5 /* WalletInfo.swift in Sources */,
 				F38FE17B291A45A100C8F20D /* MyMenuView.swift in Sources */,
+				049C464E2935BEC100B9BEC0 /* ChoiceBehindDescriptionView.swift in Sources */,
+				049C46522935C6AE00B9BEC0 /* ChoiceNameCardTypeView.swift in Sources */,
+				049C46462935BDF300B9BEC0 /* ChoiceFrontNamecardView.swift in Sources */,
 				06B5280A291A2A7B00ACFB0D /* UsersView.swift in Sources */,
 				041764CC2925BD7C0033C3F5 /* WalletButtonView.swift in Sources */,
 				06365E84291CDEAE00CF1D3C /* DetailView.swift in Sources */,
+				049C464A2935BE3000B9BEC0 /* ChoiceFrontOnlyImageView.swift in Sources */,
 				F350A8A5291B343D00A9B9FF /* SnapCarousel.swift in Sources */,
 				045D11AD29261F2A009B8B3B /* Post.swift in Sources */,
 			);
