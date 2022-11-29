@@ -1,6 +1,6 @@
 import Foundation
 
-struct Result: Codable {
+struct Result1: Codable {
     
     var tokenAddress      : String? = nil
     var tokenId           : String? = nil

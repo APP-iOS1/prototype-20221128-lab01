@@ -13,7 +13,7 @@
 		041764CA2925BD700033C3F5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041764C92925BD700033C3F5 /* LoginView.swift */; };
 		041764CC2925BD7C0033C3F5 /* WalletButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041764CB2925BD7C0033C3F5 /* WalletButtonView.swift */; };
 		045D11AD29261F2A009B8B3B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D11AC29261F2A009B8B3B /* Post.swift */; };
-		0479BA45292C531100910CD9 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479BA44292C531100910CD9 /* Result.swift */; };
+		0479BA45292C531100910CD9 /* Result1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479BA44292C531100910CD9 /* Result1.swift */; };
 		04AED846292CFD7700CF015C /* FirstSettingNickNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AED845292CFD7700CF015C /* FirstSettingNickNameView.swift */; };
 		04AED848292D00F500CF015C /* FirstSettingSNSLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AED847292D00F500CF015C /* FirstSettingSNSLinkView.swift */; };
 		06365E82291CD48200CF1D3C /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06365E81291CD48200CF1D3C /* testView.swift */; };
@@ -24,6 +24,10 @@
 		06B52803291A290A00ACFB0D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06B52802291A290A00ACFB0D /* Preview Assets.xcassets */; };
 		06B5280A291A2A7B00ACFB0D /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B52809291A2A7B00ACFB0D /* UsersView.swift */; };
 		06B5280C291A2A8800ACFB0D /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B5280B291A2A8800ACFB0D /* MyView.swift */; };
+		189725042935E90B00383864 /* ProfilePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189725032935E90B00383864 /* ProfilePickerView.swift */; };
+		18FCD1422935D8FF00AAB9CE /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 18FCD1412935D8FF00AAB9CE /* CodeScanner */; };
+		18FCD1442935D9BA00AAB9CE /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCD1432935D9BA00AAB9CE /* QRView.swift */; };
+		18FCD1482935E03300AAB9CE /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCD1472935E03300AAB9CE /* MyProfileView.swift */; };
 		2D7FDB60291CC2BB0050AFC4 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7FDB5F291CC2BB0050AFC4 /* MyPageView.swift */; };
 		2D7FDB62291CD0450050AFC4 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7FDB61291CD0450050AFC4 /* AddView.swift */; };
 		2D7FDB64291CD0A40050AFC4 /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7FDB63291CD0A40050AFC4 /* TempView.swift */; };
@@ -41,7 +45,7 @@
 		041764C92925BD700033C3F5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		041764CB2925BD7C0033C3F5 /* WalletButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletButtonView.swift; sourceTree = "<group>"; };
 		045D11AC29261F2A009B8B3B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		0479BA44292C531100910CD9 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		0479BA44292C531100910CD9 /* Result1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result1.swift; sourceTree = "<group>"; };
 		04AED845292CFD7700CF015C /* FirstSettingNickNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSettingNickNameView.swift; sourceTree = "<group>"; };
 		04AED847292D00F500CF015C /* FirstSettingSNSLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSettingSNSLinkView.swift; sourceTree = "<group>"; };
 		06365E81291CD48200CF1D3C /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
@@ -53,6 +57,10 @@
 		06B52802291A290A00ACFB0D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		06B52809291A2A7B00ACFB0D /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		06B5280B291A2A8800ACFB0D /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		189725032935E90B00383864 /* ProfilePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickerView.swift; sourceTree = "<group>"; };
+		18FCD13D2935D34300AAB9CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		18FCD1432935D9BA00AAB9CE /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
+		18FCD1472935E03300AAB9CE /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
 		2D7FDB5F291CC2BB0050AFC4 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		2D7FDB61291CD0450050AFC4 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		2D7FDB63291CD0A40050AFC4 /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
@@ -69,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18FCD1422935D8FF00AAB9CE /* CodeScanner in Frameworks */,
 				041764C22925BC360033C3F5 /* Glaip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,7 +92,7 @@
 				041764C52925BD390033C3F5 /* WalletInfo.swift */,
 				041764C92925BD700033C3F5 /* LoginView.swift */,
 				041764CB2925BD7C0033C3F5 /* WalletButtonView.swift */,
-				0479BA44292C531100910CD9 /* Result.swift */,
+				0479BA44292C531100910CD9 /* Result1.swift */,
 				04AED845292CFD7700CF015C /* FirstSettingNickNameView.swift */,
 				04AED847292D00F500CF015C /* FirstSettingSNSLinkView.swift */,
 			);
@@ -110,6 +119,7 @@
 		06B527FA291A290500ACFB0D /* Cherry */ = {
 			isa = PBXGroup;
 			children = (
+				18FCD13D2935D34300AAB9CE /* Info.plist */,
 				06B527FB291A290500ACFB0D /* CherryApp.swift */,
 				06B527FD291A290500ACFB0D /* ContentView.swift */,
 				F38FE17A291A45A100C8F20D /* MyMenuView.swift */,
@@ -119,6 +129,7 @@
 				2D7FDB65291CD0C20050AFC4 /* TabView */,
 				F350A8A7291B344900A9B9FF /* Model */,
 				F350A8A2291B343C00A9B9FF /* View */,
+				18FCD1342935CEFE00AAB9CE /* QRCode */,
 				06B527FF291A290A00ACFB0D /* Assets.xcassets */,
 				06B52801291A290A00ACFB0D /* Preview Content */,
 			);
@@ -131,6 +142,14 @@
 				06B52802291A290A00ACFB0D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		18FCD1342935CEFE00AAB9CE /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				18FCD1432935D9BA00AAB9CE /* QRView.swift */,
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 		2D7FDB65291CD0C20050AFC4 /* TabView */ = {
@@ -153,6 +172,8 @@
 				06365E83291CDEAE00CF1D3C /* DetailView.swift */,
 				F350A8AA291B366500A9B9FF /* CardFilp.swift */,
 				06365E81291CD48200CF1D3C /* testView.swift */,
+				18FCD1472935E03300AAB9CE /* MyProfileView.swift */,
+				189725032935E90B00383864 /* ProfilePickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +204,7 @@
 			name = Cherry;
 			packageProductDependencies = (
 				041764C12925BC360033C3F5 /* Glaip */,
+				18FCD1412935D8FF00AAB9CE /* CodeScanner */,
 			);
 			productName = Cherry;
 			productReference = 06B527F8291A290500ACFB0D /* Cherry.app */;
@@ -214,6 +236,7 @@
 			mainGroup = 06B527EF291A290500ACFB0D;
 			packageReferences = (
 				041764C02925BC360033C3F5 /* XCRemoteSwiftPackageReference "Glaip" */,
+				18FCD1402935D8FF00AAB9CE /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = 06B527F9291A290500ACFB0D /* Products */;
 			projectDirPath = "";
@@ -246,10 +269,11 @@
 				2D7FDB62291CD0450050AFC4 /* AddView.swift in Sources */,
 				04AED848292D00F500CF015C /* FirstSettingSNSLinkView.swift in Sources */,
 				06B527FE291A290500ACFB0D /* ContentView.swift in Sources */,
+				18FCD1482935E03300AAB9CE /* MyProfileView.swift in Sources */,
 				F350A8A6291B343D00A9B9FF /* Home.swift in Sources */,
 				F350A8AF291B3CFF00A9B9FF /* CameraQRView.swift in Sources */,
 				2D7FDB60291CC2BB0050AFC4 /* MyPageView.swift in Sources */,
-				0479BA45292C531100910CD9 /* Result.swift in Sources */,
+				0479BA45292C531100910CD9 /* Result1.swift in Sources */,
 				04AED846292CFD7700CF015C /* FirstSettingNickNameView.swift in Sources */,
 				06B527FC291A290500ACFB0D /* CherryApp.swift in Sources */,
 				041764C42925BD160033C3F5 /* Response.swift in Sources */,
@@ -260,9 +284,11 @@
 				041764C62925BD390033C3F5 /* WalletInfo.swift in Sources */,
 				F38FE17B291A45A100C8F20D /* MyMenuView.swift in Sources */,
 				06B5280A291A2A7B00ACFB0D /* UsersView.swift in Sources */,
+				189725042935E90B00383864 /* ProfilePickerView.swift in Sources */,
 				041764CC2925BD7C0033C3F5 /* WalletButtonView.swift in Sources */,
 				06365E84291CDEAE00CF1D3C /* DetailView.swift in Sources */,
 				F350A8A5291B343D00A9B9FF /* SnapCarousel.swift in Sources */,
+				18FCD1442935D9BA00AAB9CE /* QRView.swift in Sources */,
 				045D11AD29261F2A009B8B3B /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,9 +418,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cherry/Preview Content\"";
-				DEVELOPMENT_TEAM = CGUAL476T6;
+				DEVELOPMENT_TEAM = NJ3XY7UG88;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cherry/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 접근을 허용해주세요.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -406,7 +434,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.likelion;
+				PRODUCT_BUNDLE_IDENTIFIER = com.junasdf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -422,9 +450,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cherry/Preview Content\"";
-				DEVELOPMENT_TEAM = CGUAL476T6;
+				DEVELOPMENT_TEAM = NJ3XY7UG88;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cherry/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 접근을 허용해주세요.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -436,7 +466,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.likelion;
+				PRODUCT_BUNDLE_IDENTIFIER = com.junasdf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -476,6 +506,14 @@
 				kind = branch;
 			};
 		};
+		18FCD1402935D8FF00AAB9CE /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -483,6 +521,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 041764C02925BC360033C3F5 /* XCRemoteSwiftPackageReference "Glaip" */;
 			productName = Glaip;
+		};
+		18FCD1412935D8FF00AAB9CE /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18FCD1402935D8FF00AAB9CE /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

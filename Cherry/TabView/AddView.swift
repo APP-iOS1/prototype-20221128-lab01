@@ -14,13 +14,13 @@ struct AddView: View {
     var body: some View {
         VStack {
             NavigationView {
-                Button("Modal") {
-                    presentSheet = true
-                    
-                }.sheet(isPresented: $presentSheet) {
-                    Text("Detail")
-                        .presentationDetents([.medium, .large])
-                }
+                QRView()
+//                Button("Modal") {
+//                    presentSheet = true
+//
+//                }.sheet(isPresented: $presentSheet) {
+//
+//                }
             }
         }
     }

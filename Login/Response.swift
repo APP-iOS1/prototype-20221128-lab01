@@ -6,7 +6,7 @@ struct Response: Codable {
   var page     : Int?      = nil
   var pageSize : Int?      = nil
   var cursor   : String?   = nil
-  var result   : [Result]? = []
+  var result   : [Result1]? = []
   var status   : String?   = nil
 
   enum CodingKeys: String, CodingKey {
@@ -27,7 +27,7 @@ struct Response: Codable {
     page     = try values.decodeIfPresent(Int.self      , forKey: .page     )
     pageSize = try values.decodeIfPresent(Int.self      , forKey: .pageSize )
     cursor   = try values.decodeIfPresent(String.self   , forKey: .cursor   )
-    result   = try values.decodeIfPresent([Result].self , forKey: .result   )
+    result   = try values.decodeIfPresent([Result1].self , forKey: .result   )
     status   = try values.decodeIfPresent(String.self   , forKey: .status   )
  
   }
