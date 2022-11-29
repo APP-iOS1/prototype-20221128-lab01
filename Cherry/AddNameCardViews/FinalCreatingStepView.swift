@@ -12,7 +12,9 @@ struct FinalCreatingStepView: View {
 
     var body: some View {
         Button("처음으로 돌아가기"){
-            stack = .init()
+            while(!stack.isEmpty){
+                stack.removeLast()
+            }
         }
     }
 }

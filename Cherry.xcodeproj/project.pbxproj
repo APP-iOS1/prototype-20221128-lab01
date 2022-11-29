@@ -13,7 +13,6 @@
 		041764CA2925BD700033C3F5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041764C92925BD700033C3F5 /* LoginView.swift */; };
 		041764CC2925BD7C0033C3F5 /* WalletButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041764CB2925BD7C0033C3F5 /* WalletButtonView.swift */; };
 		045D11AD29261F2A009B8B3B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045D11AC29261F2A009B8B3B /* Post.swift */; };
-
 		0479BA45292C531100910CD9 /* Result1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0479BA44292C531100910CD9 /* Result1.swift */; };
 		049C46462935BDF300B9BEC0 /* ChoiceFrontNamecardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C46452935BDF300B9BEC0 /* ChoiceFrontNamecardView.swift */; };
 		049C46482935BE0D00B9BEC0 /* ChoiceBackNamecardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C46472935BE0D00B9BEC0 /* ChoiceBackNamecardView.swift */; };
@@ -22,7 +21,6 @@
 		049C464E2935BEC100B9BEC0 /* ChoiceBehindDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C464D2935BEC100B9BEC0 /* ChoiceBehindDescriptionView.swift */; };
 		049C46502935BEE900B9BEC0 /* FinalCreatingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C464F2935BEE900B9BEC0 /* FinalCreatingStepView.swift */; };
 		049C46522935C6AE00B9BEC0 /* ChoiceNameCardTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C46512935C6AE00B9BEC0 /* ChoiceNameCardTypeView.swift */; };
-
 		04AED846292CFD7700CF015C /* FirstSettingNickNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AED845292CFD7700CF015C /* FirstSettingNickNameView.swift */; };
 		04AED848292D00F500CF015C /* FirstSettingSNSLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AED847292D00F500CF015C /* FirstSettingSNSLinkView.swift */; };
 		06365E82291CD48200CF1D3C /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06365E81291CD48200CF1D3C /* testView.swift */; };
@@ -54,7 +52,6 @@
 		041764C92925BD700033C3F5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		041764CB2925BD7C0033C3F5 /* WalletButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletButtonView.swift; sourceTree = "<group>"; };
 		045D11AC29261F2A009B8B3B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-
 		0479BA44292C531100910CD9 /* Result1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result1.swift; sourceTree = "<group>"; };
 		049C46452935BDF300B9BEC0 /* ChoiceFrontNamecardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceFrontNamecardView.swift; sourceTree = "<group>"; };
 		049C46472935BE0D00B9BEC0 /* ChoiceBackNamecardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceBackNamecardView.swift; sourceTree = "<group>"; };
@@ -63,7 +60,6 @@
 		049C464D2935BEC100B9BEC0 /* ChoiceBehindDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceBehindDescriptionView.swift; sourceTree = "<group>"; };
 		049C464F2935BEE900B9BEC0 /* FinalCreatingStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalCreatingStepView.swift; sourceTree = "<group>"; };
 		049C46512935C6AE00B9BEC0 /* ChoiceNameCardTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceNameCardTypeView.swift; sourceTree = "<group>"; };
-
 		04AED845292CFD7700CF015C /* FirstSettingNickNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSettingNickNameView.swift; sourceTree = "<group>"; };
 		04AED847292D00F500CF015C /* FirstSettingSNSLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSettingSNSLinkView.swift; sourceTree = "<group>"; };
 		06365E81291CD48200CF1D3C /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
@@ -167,9 +163,7 @@
 		06B527FA291A290500ACFB0D /* Cherry */ = {
 			isa = PBXGroup;
 			children = (
-
 				18FCD13D2935D34300AAB9CE /* Info.plist */,
-
 				049C46442935BD8B00B9BEC0 /* AddNameCardViews */,
 				06B527FB291A290500ACFB0D /* CherryApp.swift */,
 				06B527FD291A290500ACFB0D /* ContentView.swift */,
@@ -476,7 +470,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cherry/Preview Content\"";
-				DEVELOPMENT_TEAM = NJ3XY7UG88;
+				DEVELOPMENT_TEAM = ZY2JSKSW29;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cherry/Info.plist;
@@ -492,7 +486,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.junasdf;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asdfasdas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -508,7 +502,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cherry/Preview Content\"";
-				DEVELOPMENT_TEAM = NJ3XY7UG88;
+				DEVELOPMENT_TEAM = ZY2JSKSW29;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cherry/Info.plist;
@@ -524,7 +518,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.junasdf;
+				PRODUCT_BUNDLE_IDENTIFIER = com.asdfasdas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

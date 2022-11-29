@@ -92,10 +92,9 @@ struct ChoiceFrontImageNTextView: View {
                 }
                 Spacer()
             }
-            NavigationLink("다음", value: "5").navigationDestination(for: String.self){ value in
-                FinalCreatingStepView(stack: $stack)//완전히 완료.
+            NavigationLink("다음", destination: FinalCreatingStepView(stack: $stack))
                 
-            }
+            
         }.frame(width: 300)
     }
 }

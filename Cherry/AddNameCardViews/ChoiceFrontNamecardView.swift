@@ -23,10 +23,9 @@ struct ChoiceFrontNamecardView: View {
                     Image("NFTcard1")
                         .resizable()
                         .frame(width: 150, height: 250)
-                    NavigationLink("선택", value: "3")
-                        .navigationDestination(for: String.self){ value in
-                            ChoiceFrontImageNTextView(stack: $stack)
-                    }
+                    NavigationLink("선택", destination: ChoiceFrontImageNTextView(stack: $stack))
+                            
+                    
                     
                 }
                 Spacer()
@@ -36,11 +35,8 @@ struct ChoiceFrontNamecardView: View {
                         .resizable()
                         .frame(width: 150, height: 250)
                     
-                    NavigationLink("선택", value: "4")
-                        .navigationDestination(for: String.self){
-                        value in
-                        ChoiceFrontOnlyImageView()
-                    }
+                    NavigationLink("선택", destination: ChoiceFrontOnlyImageView())
+                        
                 }
                 Spacer()
             }.padding(20)

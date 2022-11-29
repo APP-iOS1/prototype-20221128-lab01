@@ -103,12 +103,12 @@ struct FirstSettingSNSLinkView: View {
                             .background(Color("MainColor"))
                             .cornerRadius(10)
                     }
+                    Spacer()
                 }
             }else{
                 ContentView(logoutAction: {})
             }
         }
-        .padding()
         
     }
 }

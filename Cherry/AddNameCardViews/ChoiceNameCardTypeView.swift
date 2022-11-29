@@ -22,11 +22,7 @@ struct ChoiceNameCardTypeView: View {
                     Image("NFTcard1")
                         .resizable()
                         .frame(width: 100, height: 200)
-                    NavigationLink("선택", value: "1")
-                        .navigationDestination(for: String.self){
-                            value in
-                            ChoiceFrontNamecardView(stack: $stack)
-                        }
+                    NavigationLink("선택", destination: ChoiceFrontNamecardView(stack: $stack))
                 }
                 Spacer()
                 VStack{
@@ -39,11 +35,7 @@ struct ChoiceNameCardTypeView: View {
                             .resizable()
                             .frame(width: 100, height: 200)
                     }
-                    NavigationLink("선택", value: "2")
-                        .navigationDestination(for: String.self){
-                            value in
-                            ChoiceFrontNamecardView(stack: $stack)
-                        }
+                    NavigationLink("선택", destination: ChoiceFrontNamecardView(stack: $stack))
                 }
                 Spacer()
             }
