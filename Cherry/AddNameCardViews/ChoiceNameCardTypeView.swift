@@ -26,7 +26,7 @@ struct ChoiceNameCardTypeView: View {
                 }
                 Spacer()
                 VStack{
-                    Text("양면 명함")
+                    Text("양면 명함(준비중)")
                     HStack{
                         Image("NFTcard1")
                             .resizable()
