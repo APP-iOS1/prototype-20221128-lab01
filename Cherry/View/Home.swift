@@ -20,34 +20,34 @@ struct Home: View {
         
         NavigationView {
             ZStack {
-                TabView(selection: $currentIndex) {
-                    ForEach(posts.indices, id: \.self) { index in
-                        GeometryReader { proxy in
-                            Image(posts[index].frontImg)
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: proxy.size.width, height: proxy.size.height)
-                                .cornerRadius(1)
-                        }
-                        .ignoresSafeArea()
-                        .offset(y: -100)
-                    }
-                }
-                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                .animation(.easeInOut, value: currentIndex)
-                .overlay(
-                    
-                    LinearGradient(colors: [
-                        
-                        Color.clear,
-                        Color.black.opacity(0.2),
-                        Color.white.opacity(0.4),
-                        Color.white,
-                        Color.white,
-                        Color.white,
-                    ], startPoint: .top, endPoint: .bottom)
-                )
-                .ignoresSafeArea()
+//                TabView(selection: $currentIndex) {
+//                    ForEach(posts.indices, id: \.self) { index in
+//                        GeometryReader { proxy in
+//                            Image(posts[index].frontImg)
+//                                .resizable()
+//                                .aspectRatio(contentMode: .fill)
+//                                .frame(width: proxy.size.width, height: proxy.size.height)
+//                                .cornerRadius(1)
+//                        }
+//                        .ignoresSafeArea()
+//                        .offset(y: -100)
+//                    }
+//                }
+//                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+//                .animation(.easeInOut, value: currentIndex)
+//                .overlay(
+//
+//                    LinearGradient(colors: [
+//
+//                        Color.clear,
+//                        Color.black.opacity(0.2),
+//                        Color.white.opacity(0.4),
+//                        Color.white,
+//                        Color.white,
+//                        Color.white,
+//                    ], startPoint: .top, endPoint: .bottom)
+//                )
+//                .ignoresSafeArea()
                 
                 //posts..
                 SnapCarousel(trailingSpace: getRect().height < 750 ? 100 : 150 ,index: $currentIndex, items: posts) { post in
@@ -89,7 +89,7 @@ struct Home: View {
             //CardButtonView()
             GeometryReader { proxy in
                 
-                CardFlipView(frontImage:post.frontImg, backImage: post.backImg, width: proxy.size.width/1.5, height: proxy.size.height/1.5)
+                CardFlipView(frontImage:post.frontImg, backImage: post.backImg, width: proxy.size.width/1.3, height: proxy.size.height/1.3)
                     .frame(width: proxy.size.width, height: proxy.size.height)
                     .cornerRadius(25)
             }
