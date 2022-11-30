@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChoiceBehindDescriptionView: View {
-    @Binding var stack: NavigationPath
+    @Binding var firstNaviLinkActive: Bool
     @State private var ownerName: String = ""
     @State private var description: String = ""
     var body: some View {
@@ -37,6 +37,6 @@ struct ChoiceBehindDescriptionView: View {
 
 struct ChoiceBehindDescriptionView_Previews: PreviewProvider {
     static var previews: some View {
-        ChoiceBehindDescriptionView(stack: Binding.constant(NavigationPath()))
+        ChoiceBehindDescriptionView(firstNaviLinkActive: .constant(true))
     }
 }

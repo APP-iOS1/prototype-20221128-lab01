@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChoiceNameCardTypeView: View {
-    @Binding var stack: NavigationPath
+    @Binding var firstNaviLinkActive: Bool
     var body: some View {
         
         
@@ -22,7 +22,7 @@ struct ChoiceNameCardTypeView: View {
                     Image("NFTcard1")
                         .resizable()
                         .frame(width: 100, height: 200)
-                    NavigationLink("선택", destination: ChoiceFrontNamecardView(stack: $stack))
+                    NavigationLink("선택", destination: ChoiceFrontNamecardView(firstNaviLinkActive: $firstNaviLinkActive))
                 }
                 Spacer()
                 VStack{
@@ -35,7 +35,7 @@ struct ChoiceNameCardTypeView: View {
                             .resizable()
                             .frame(width: 100, height: 200)
                     }
-                    NavigationLink("선택", destination: Multi_ChoiceFrontNamecardView(stack: $stack))
+                    NavigationLink("선택", destination: Multi_ChoiceFrontNamecardView(firstNaviLinkActive: $firstNaviLinkActive))
                 }
                 Spacer()
             }
@@ -46,6 +46,6 @@ struct ChoiceNameCardTypeView: View {
 
 struct ChoiceNameCardTypeView_Previews: PreviewProvider {
     static var previews: some View {
-        ChoiceNameCardTypeView(stack: Binding.constant(NavigationPath()))
+        ChoiceNameCardTypeView(firstNaviLinkActive: .constant(true))
     }
 }

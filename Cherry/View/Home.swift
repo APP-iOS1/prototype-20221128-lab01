@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct Home: View {
-    @State var stack = NavigationPath()
+    @State var firstNaviLinkActive = false
     // current index
     @State var currentIndex: Int = 0
     @State var isShowingSheet : Bool = false
@@ -18,7 +18,7 @@ struct Home: View {
     @State var isShowingDeleteAlert: Bool = false
     var body: some View {
         
-        NavigationStack(path: $stack) {
+        NavigationView {
             ZStack {
                 TabView(selection: $currentIndex) {
                     ForEach(posts.indices, id: \.self) { index in
@@ -61,7 +61,7 @@ struct Home: View {
                 //                TopItemView(isShowingCamera: $isShowingCamera, isShowingSheet: $isShowingSheet)
                 //                    .position(x:200,y:10)
                 HStack{
-                    NavigationLink(destination: ChoiceNameCardTypeView(stack: $stack)){
+                    NavigationLink(destination: ChoiceNameCardTypeView(firstNaviLinkActive: $firstNaviLinkActive), isActive: $firstNaviLinkActive){
                         Image(systemName: "plus.circle")
                             .resizable()
                             .frame(width:50, height: 50)

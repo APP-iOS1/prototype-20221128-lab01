@@ -41,7 +41,7 @@ import SwiftUI
  }
  */
 struct ChoiceFrontImageNTextView: View {
-    @Binding var stack: NavigationPath
+    @Binding var firstNaviLinkActive: Bool
 
     @State private var nftCollectionName: String = ""
     @State private var nftName: String = ""
@@ -92,7 +92,7 @@ struct ChoiceFrontImageNTextView: View {
                 }
                 Spacer()
             }
-            NavigationLink("다음", destination: FinalCreatingStepView(stack: $stack))
+            NavigationLink("다음", destination: FinalCreatingStepView(firstNaviLinkActive: $firstNaviLinkActive))
                 
             
         }.frame(width: 300)
@@ -124,6 +124,6 @@ struct RoundedCorner: Shape {
 }
 struct ChoiceFrontImageNTextView_Previews: PreviewProvider {
     static var previews: some View {
-        ChoiceFrontImageNTextView(stack: Binding.constant(NavigationPath()))
+        ChoiceFrontImageNTextView(firstNaviLinkActive: .constant(true))
     }
 }

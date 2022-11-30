@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Multi_ChoiceFrontImageNTextView: View {
-    @Binding var stack: NavigationPath
+    @Binding var firstNaviLinkActive: Bool
 
     @State private var nftCollectionName: String = ""
     @State private var nftName: String = ""
@@ -59,7 +59,7 @@ struct Multi_ChoiceFrontImageNTextView: View {
                 }
                 Spacer()
             }
-            NavigationLink("다음", destination: ChoiceBehindDescriptionView(stack: $stack))
+            NavigationLink("다음", destination: ChoiceBehindDescriptionView(firstNaviLinkActive: $firstNaviLinkActive))
                 
             
         }.frame(width: 300)
@@ -68,6 +68,6 @@ struct Multi_ChoiceFrontImageNTextView: View {
 
 struct Multi_ChoiceFrontImageNTextView_Previews: PreviewProvider {
     static var previews: some View {
-        Multi_ChoiceFrontImageNTextView(stack: Binding.constant(NavigationPath()))
+        Multi_ChoiceFrontImageNTextView(firstNaviLinkActive: .constant(true))
     }
 }

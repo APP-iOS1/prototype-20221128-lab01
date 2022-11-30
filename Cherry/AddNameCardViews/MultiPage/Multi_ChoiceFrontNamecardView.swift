@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Multi_ChoiceFrontNamecardView: View {
-    @Binding var stack: NavigationPath
+    @Binding var firstNaviLinkActive: Bool
     //어떤 템플릿을 선택했는지에 따라서
     //ChoiceFrontOnlyImageView와 ChoiceFrontImageNTextView로 나뉘
     var body: some View {
@@ -23,7 +23,7 @@ struct Multi_ChoiceFrontNamecardView: View {
                     Image("NFTcard1")
                         .resizable()
                         .frame(width: 150, height: 250)
-                    NavigationLink("선택", destination: Multi_ChoiceFrontImageNTextView(stack: $stack))
+                    NavigationLink("선택", destination: Multi_ChoiceFrontImageNTextView(firstNaviLinkActive: $firstNaviLinkActive))
                             
                     
                     
@@ -35,7 +35,7 @@ struct Multi_ChoiceFrontNamecardView: View {
                         .resizable()
                         .frame(width: 150, height: 250)
                     
-                    NavigationLink("선택", destination: Multi_ChoiceFrontOnlyImageView(stack: $stack))
+                    NavigationLink("선택", destination: Multi_ChoiceFrontOnlyImageView(firstNaviLinkActive: $firstNaviLinkActive))
                         
                 }
                 Spacer()
@@ -46,6 +46,6 @@ struct Multi_ChoiceFrontNamecardView: View {
 
 struct Multi_ChoiceFrontNamecardView_Previews: PreviewProvider {
     static var previews: some View {
-        Multi_ChoiceFrontNamecardView(stack: Binding.constant(NavigationPath()))
+        Multi_ChoiceFrontNamecardView(firstNaviLinkActive: .constant(true))
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Multi_ChoiceFrontOnlyImageView: View {
-    @Binding var stack: NavigationPath
+    @Binding var firstNaviLinkActive: Bool
     @State private var nftCollectionName: String = ""
     @State private var nftName: String = ""
     @State private var nftNumber: String = ""
@@ -33,7 +33,7 @@ struct Multi_ChoiceFrontOnlyImageView: View {
                 .resizable()
                 .frame(width: 75, height: 75)
                 .position(x:260, y: 550)
-            NavigationLink("다음", destination: ChoiceBehindDescriptionView(stack: $stack))
+            NavigationLink("다음", destination: ChoiceBehindDescriptionView(firstNaviLinkActive: $firstNaviLinkActive))
                 .position(x: 150, y: 620)
         }.frame(width: 300, height: 600)
     }
@@ -41,6 +41,6 @@ struct Multi_ChoiceFrontOnlyImageView: View {
 
 struct Multi_ChoiceFrontOnlyImageView_Previews: PreviewProvider {
     static var previews: some View {
-        Multi_ChoiceFrontOnlyImageView(stack: Binding.constant(NavigationPath()))
+        Multi_ChoiceFrontOnlyImageView(firstNaviLinkActive: .constant(true))
     }
 }

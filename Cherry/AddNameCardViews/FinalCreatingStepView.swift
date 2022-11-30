@@ -8,19 +8,23 @@
 import SwiftUI
 
 struct FinalCreatingStepView: View {
-    @Environment(\.dismiss) private var dismiss
-    @Binding var stack: NavigationPath
+    @Binding var firstNaviLinkActive: Bool
 
     var body: some View {
-        Button("처음으로 돌아가기"){
-            stack = .init()
-        }
-        
+        Button(action: {
+            firstNaviLinkActive = false
+        }, label: {
+            Text("Main으로 돌아가기")
+                .foregroundColor(Color.white)
+                .frame(width: 100, height: 60, alignment: .center)
+                .background(RoundedRectangle(cornerRadius: 10)
+                    .fill(Color.purple))
+        })
     }
 }
 
 struct FinalCreatingStepView_Previews: PreviewProvider {
     static var previews: some View {
-        FinalCreatingStepView(stack: Binding.constant(NavigationPath()))
+        FinalCreatingStepView(firstNaviLinkActive: .constant(true))
     }
 }
