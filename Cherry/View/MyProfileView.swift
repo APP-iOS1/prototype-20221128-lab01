@@ -11,7 +11,7 @@ import PhotosUI
 struct MyProfileView: View {
     
     @State var selectedPage = "Wallet Activities"
-    var pages = ["Wallet Activities", "NFTs"]
+//    var pages = ["Wallet Activities", "NFTs"]
     
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImageData: Data? = nil
@@ -94,22 +94,23 @@ struct MyProfileView: View {
             .padding()
             
             VStack {
-                Picker("Choose a page", selection: $selectedPage) {
-                    ForEach(pages, id: \.self) {
-                        Text($0)
-                        
-                    }
-                }
-                .pickerStyle(.segmented)
-                
-                switch selectedPage {
-                case "Wallet Activities" :
-                    ProfilePickerView1()
-                case "NFTs" :
-                    ProfilePickerView2()
-                default:
-                    ProfilePickerView1()
-                }
+                ProfilePickerView2()
+//                Picker("Choose a page", selection: $selectedPage) {
+//                    ForEach(pages, id: \.self) {
+//                        Text($0)
+//
+//                    }
+//                }
+//                .pickerStyle(.segmented)
+//
+//                switch selectedPage {
+//                case "Wallet Activities" :
+//                    ProfilePickerView1()
+//                case "NFTs" :
+//                    ProfilePickerView2()
+//                default:
+//                    ProfilePickerView1()
+//                }
                 
             }
             

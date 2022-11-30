@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FinalCreatingStepView: View {
+struct FinalCreatingStepView: View {                                                                                                                                                                                                                                                                                                 
     @Binding var stack: NavigationPath
 
     var body: some View {
