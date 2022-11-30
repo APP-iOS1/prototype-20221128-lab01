@@ -16,10 +16,16 @@ struct Home: View {
     @State var isShowingCamera: Bool = false
     @State var isShowingDetailSheet: Bool = false
     @State var isShowingDeleteAlert: Bool = false
+    
+    @State private var backgroundColor: Color = .clear
+    
+    
     var body: some View {
         
         NavigationView {
             ZStack {
+                backgroundColor
+                    .opacity(0.5)
 //                TabView(selection: $currentIndex) {
 //                    ForEach(posts.indices, id: \.self) { index in
 //                        GeometryReader { proxy in
@@ -53,6 +59,9 @@ struct Home: View {
                 SnapCarousel(trailingSpace: getRect().height < 750 ? 100 : 150 ,index: $currentIndex, items: posts) { post in
                     
                     CardView(post: post)
+                        .onAppear {
+                            setAverageColor(image: post.frontImg)
+                        }
                     
                 }
                 .offset(y: getRect().height / 4)
@@ -146,6 +155,13 @@ struct Home: View {
     func didDismiss(){
         //...
     }
+    
+    private func setAverageColor(image: String) {
+        let uiColor = UIImage(named: image)?.averageColor ?? .clear
+        backgroundColor = Color(uiColor)
+    }
+    
+    
 }
 
 struct Home_Previews: PreviewProvider {

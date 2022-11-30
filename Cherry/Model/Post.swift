@@ -9,8 +9,8 @@ struct Post: Identifiable, Hashable {
 
 var posts = [
     
-    Post(frontImg:"NFTcard1",backImg:"NFTcard4"),
     Post(frontImg:"NFTcard2",backImg:"NFTcard4"),
+    Post(frontImg:"NFTcard1",backImg:"NFTcard4"),
     Post(frontImg:"NFTcard3",backImg:"NFTcard5"),
     Post(frontImg:"NFTcard4",backImg:"NFTcard4")
 ]

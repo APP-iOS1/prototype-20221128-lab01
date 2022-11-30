@@ -36,6 +36,8 @@
 		140E97582937200A00E85F5D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E97572937200A00E85F5D /* SearchBar.swift */; };
 		140E975A293726E100E85F5D /* CardCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E9759293726E100E85F5D /* CardCollection.swift */; };
 		1829E4582937923C006F72AE /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829E4572937923C006F72AE /* SafariView.swift */; };
+		1829E45A2937A37B006F72AE /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829E4592937A37A006F72AE /* TestView.swift */; };
+		1829E45E2937AE5F006F72AE /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829E45D2937AE5F006F72AE /* UIImage+Extension.swift */; };
 		189725042935E90B00383864 /* ProfilePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189725032935E90B00383864 /* ProfilePickerView.swift */; };
 		18FCD1422935D8FF00AAB9CE /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 18FCD1412935D8FF00AAB9CE /* CodeScanner */; };
 		18FCD1442935D9BA00AAB9CE /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCD1432935D9BA00AAB9CE /* QRView.swift */; };
@@ -81,6 +83,8 @@
 		140E97572937200A00E85F5D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		140E9759293726E100E85F5D /* CardCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollection.swift; sourceTree = "<group>"; };
 		1829E4572937923C006F72AE /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		1829E4592937A37A006F72AE /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		1829E45D2937AE5F006F72AE /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		189725032935E90B00383864 /* ProfilePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickerView.swift; sourceTree = "<group>"; };
 		18FCD13D2935D34300AAB9CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		18FCD1432935D9BA00AAB9CE /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 				F38FE17A291A45A100C8F20D /* MyMenuView.swift */,
 				F38FE17C291A45B400C8F20D /* UsersMenuView.swift */,
 				F350A8AE291B3CFF00A9B9FF /* CameraQRView.swift */,
+				1829E45F2937AEDF006F72AE /* BackgroundColor */,
 				04CC29B429266A030038FC5F /* Login */,
 				2D7FDB65291CD0C20050AFC4 /* TabView */,
 				F350A8A7291B344900A9B9FF /* Model */,
@@ -199,6 +204,15 @@
 				06B52802291A290A00ACFB0D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1829E45F2937AEDF006F72AE /* BackgroundColor */ = {
+			isa = PBXGroup;
+			children = (
+				1829E45D2937AE5F006F72AE /* UIImage+Extension.swift */,
+				1829E4592937A37A006F72AE /* TestView.swift */,
+			);
+			path = BackgroundColor;
 			sourceTree = "<group>";
 		};
 		18FCD1342935CEFE00AAB9CE /* QRCode */ = {
@@ -348,9 +362,11 @@
 				041764CA2925BD700033C3F5 /* LoginView.swift in Sources */,
 				049C464C2935BE6E00B9BEC0 /* ChoiceFrontImageNTextView.swift in Sources */,
 				041764C62925BD390033C3F5 /* WalletInfo.swift in Sources */,
+				1829E45A2937A37B006F72AE /* TestView.swift in Sources */,
 				F38FE17B291A45A100C8F20D /* MyMenuView.swift in Sources */,
 				049C464E2935BEC100B9BEC0 /* ChoiceBehindDescriptionView.swift in Sources */,
 				049C46522935C6AE00B9BEC0 /* ChoiceNameCardTypeView.swift in Sources */,
+				1829E45E2937AE5F006F72AE /* UIImage+Extension.swift in Sources */,
 				045211BD293716BD000B0112 /* Multi_ChoiceFrontNamecardView.swift in Sources */,
 				049C46462935BDF300B9BEC0 /* ChoiceFrontNamecardView.swift in Sources */,
 				06B5280A291A2A7B00ACFB0D /* UsersView.swift in Sources */,

@@ -11,7 +11,7 @@ import CodeScanner
 struct QRView: View {
     @State private var isShowingScanner: Bool = false
     @State var scannedCode: String = "https://www.google.com/"
-    @State var openSafari: Bool = false
+    @State var safariOpened: Bool = false
     @State var showSafari: Bool = true
     
     var scannerSheet: some View {
@@ -23,7 +23,7 @@ struct QRView: View {
                 if case let .success(code) = result {
                     self.scannedCode = code.string
                     self.isShowingScanner = false
-                    self.openSafari = true
+                    self.safariOpened = true
                 }
             }
         )
@@ -34,7 +34,7 @@ struct QRView: View {
         
         VStack {
             
-            if openSafari {
+            if safariOpened {
                 ZStack {
                     SafariView(showSafari: $showSafari, url: URL(string: scannedCode)!)
                     
@@ -59,7 +59,7 @@ struct QRView: View {
                 Button {
                     self.isShowingScanner = true
                 } label: {
-                    Text("QR 코드 다시 스캔")
+                    Text("QR 코드 스캔하기")
                         .foregroundColor(.white)
                         .padding(10)
                         .background(Color.pink)
@@ -76,17 +76,4 @@ struct QRView: View {
         
     }
     
-    func handleScan(result: Result<ScanResult, ScanError>) {
-        isShowingScanner = false
-        
-        switch result {
-        case .success(let result):
-            let details = result.string.components(separatedBy: "\n")
-            guard details.count == 2 else { return }
-
-            
-        case .failure(let error):
-            print("Scanning failed: \(error.localizedDescription)")
-        }
-    }
 }
