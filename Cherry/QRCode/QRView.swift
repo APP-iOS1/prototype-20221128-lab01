@@ -15,12 +15,7 @@ struct QRView: View {
     @State var showSafari: Bool = true
     
     var scannerSheet: some View {
-//        Button(action: {
-//            self.isShowingScanner = true
-//        }) {
-//            Text("Scan QR Code")
-//        }
-//        .sheet(isPresented: $isShowingScanner) {
+
         CodeScannerView(
             codeTypes: [.qr],
 //            simulatedData: "Some simulated data",
@@ -38,17 +33,6 @@ struct QRView: View {
     var body: some View {
         
         VStack {
-            
-                
-//            self.scannerSheet
-//                .onAppear {
-//                    isShowingScanner = false
-//                    scannedURL = scannedCode
-//                }
-//                .sheet(isPresented: $isShowingScanner) {
-//                    SafariView(showSafari: $showSafari, url: URL(string: scannedURL)!)
-////                    Text(scannedCode)
-//                }
             
             if openSafari {
                 ZStack {
