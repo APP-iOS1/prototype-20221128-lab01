@@ -11,7 +11,7 @@ struct UsersView: View {
     @State private var isShowingSheet : Bool = false
     var body: some View {
         // 다른사람 명함 모아둔 tab
-        Home()
+        CardCollection()
     }
         func didDismiss(){
             //...
