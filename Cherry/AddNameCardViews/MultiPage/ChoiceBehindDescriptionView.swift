@@ -57,6 +57,7 @@ struct ChoiceBehindDescriptionView: View {
                     }
                 }
             }
+            NavigationLink("다음", destination: FinalCreatingStepView(firstNaviLinkActive: $firstNaviLinkActive))
         }.frame(width: 300, height: 600)
     }
 }
