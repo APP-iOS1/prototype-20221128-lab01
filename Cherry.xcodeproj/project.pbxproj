@@ -33,6 +33,8 @@
 		06B52803291A290A00ACFB0D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06B52802291A290A00ACFB0D /* Preview Assets.xcassets */; };
 		06B5280A291A2A7B00ACFB0D /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B52809291A2A7B00ACFB0D /* UsersView.swift */; };
 		06B5280C291A2A8800ACFB0D /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B5280B291A2A8800ACFB0D /* MyView.swift */; };
+		140E97582937200A00E85F5D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E97572937200A00E85F5D /* SearchBar.swift */; };
+		140E975A293726E100E85F5D /* CardCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140E9759293726E100E85F5D /* CardCollection.swift */; };
 		189725042935E90B00383864 /* ProfilePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189725032935E90B00383864 /* ProfilePickerView.swift */; };
 		18FCD1422935D8FF00AAB9CE /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 18FCD1412935D8FF00AAB9CE /* CodeScanner */; };
 		18FCD1442935D9BA00AAB9CE /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCD1432935D9BA00AAB9CE /* QRView.swift */; };
@@ -75,6 +77,8 @@
 		06B52802291A290A00ACFB0D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		06B52809291A2A7B00ACFB0D /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		06B5280B291A2A8800ACFB0D /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		140E97572937200A00E85F5D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		140E9759293726E100E85F5D /* CardCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollection.swift; sourceTree = "<group>"; };
 		189725032935E90B00383864 /* ProfilePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickerView.swift; sourceTree = "<group>"; };
 		18FCD13D2935D34300AAB9CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		18FCD1432935D9BA00AAB9CE /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
@@ -225,6 +229,8 @@
 				06365E81291CD48200CF1D3C /* testView.swift */,
 				18FCD1472935E03300AAB9CE /* MyProfileView.swift */,
 				189725032935E90B00383864 /* ProfilePickerView.swift */,
+				140E9759293726E100E85F5D /* CardCollection.swift */,
+				140E97572937200A00E85F5D /* SearchBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -322,6 +328,7 @@
 				06B527FE291A290500ACFB0D /* ContentView.swift in Sources */,
 				18FCD1482935E03300AAB9CE /* MyProfileView.swift in Sources */,
 				F350A8A6291B343D00A9B9FF /* Home.swift in Sources */,
+				140E97582937200A00E85F5D /* SearchBar.swift in Sources */,
 				F350A8AF291B3CFF00A9B9FF /* CameraQRView.swift in Sources */,
 				049C46502935BEE900B9BEC0 /* FinalCreatingStepView.swift in Sources */,
 				045211B929371664000B0112 /* Multi_ChoiceFrontOnlyImageView.swift in Sources */,
@@ -347,6 +354,7 @@
 				041764CC2925BD7C0033C3F5 /* WalletButtonView.swift in Sources */,
 				06365E84291CDEAE00CF1D3C /* DetailView.swift in Sources */,
 				049C464A2935BE3000B9BEC0 /* ChoiceFrontOnlyImageView.swift in Sources */,
+				140E975A293726E100E85F5D /* CardCollection.swift in Sources */,
 				F350A8A5291B343D00A9B9FF /* SnapCarousel.swift in Sources */,
 				18FCD1442935D9BA00AAB9CE /* QRView.swift in Sources */,
 				045D11AD29261F2A009B8B3B /* Post.swift in Sources */,
@@ -478,7 +486,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cherry/Preview Content\"";
-				DEVELOPMENT_TEAM = ZY2JSKSW29;
+				DEVELOPMENT_TEAM = 99KS64JD42;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cherry/Info.plist;
@@ -494,7 +502,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.asdfasdas;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jjhhs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -510,7 +518,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cherry/Preview Content\"";
-				DEVELOPMENT_TEAM = ZY2JSKSW29;
+				DEVELOPMENT_TEAM = 99KS64JD42;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cherry/Info.plist;
@@ -526,7 +534,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.asdfasdas;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jjhhs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
