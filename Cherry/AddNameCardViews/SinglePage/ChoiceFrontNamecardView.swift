@@ -35,7 +35,7 @@ struct ChoiceFrontNamecardView: View {
                         .resizable()
                         .frame(width: 150, height: 250)
                     
-                    NavigationLink("선택", destination: ChoiceFrontOnlyImageView())
+                    NavigationLink("선택", destination: ChoiceFrontOnlyImageView(stack: $stack))
                         
                 }
                 Spacer()

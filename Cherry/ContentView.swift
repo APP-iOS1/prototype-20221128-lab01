@@ -33,7 +33,9 @@ struct ContentView: View {
     
             TempView().tabItem {
                 Image(systemName: "questionmark.circle")
+                Text("준비중")
             }.tag(4)
+                
             
             MyPageView().tabItem {
                 Image(systemName: "person.crop.circle")

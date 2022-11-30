@@ -8,13 +8,35 @@
 import SwiftUI
 
 struct ChoiceBehindDescriptionView: View {
+    @Binding var stack: NavigationPath
+    @State private var ownerName: String = ""
+    @State private var description: String = ""
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            HStack{
+                Text("owned by")
+                TextField("닉네임", text: $ownerName)
+                    .foregroundColor(.cyan)
+                    .font(.largeTitle)
+            }
+            VStack{
+                HStack{
+                    Image(systemName: "line.3.horizontal")
+                        .resizable()
+                        .frame(width:20, height: 20)
+                    Text("Description")
+                    Spacer()
+                }
+                TextField("소개를 써주세요", text: $description, axis: .vertical)
+                    .lineLimit(3, reservesSpace: true)
+                    .textFieldStyle(.roundedBorder)
+            }
+        }.frame(width: 300, height: 600)
     }
 }
 
 struct ChoiceBehindDescriptionView_Previews: PreviewProvider {
     static var previews: some View {
-        ChoiceBehindDescriptionView()
+        ChoiceBehindDescriptionView(stack: Binding.constant(NavigationPath()))
     }
 }
