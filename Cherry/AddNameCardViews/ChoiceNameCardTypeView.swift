@@ -35,7 +35,7 @@ struct ChoiceNameCardTypeView: View {
                             .resizable()
                             .frame(width: 100, height: 200)
                     }
-                    NavigationLink("선택", destination: ChoiceFrontNamecardView(stack: $stack))
+                    NavigationLink("선택", destination: Multi_ChoiceFrontNamecardView(stack: $stack))
                 }
                 Spacer()
             }

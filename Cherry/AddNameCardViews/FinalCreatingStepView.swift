@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct FinalCreatingStepView: View {                                                                                                                                                                                                                                                                                                 
+struct FinalCreatingStepView: View {
+    @Environment(\.dismiss) private var dismiss
     @Binding var stack: NavigationPath
 
     var body: some View {
         Button("처음으로 돌아가기"){
-            while(!stack.isEmpty){
-                stack.removeLast()
-            }
+            stack = .init()
         }
+        
     }
 }
 

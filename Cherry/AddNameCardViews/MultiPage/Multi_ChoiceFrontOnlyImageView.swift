@@ -1,13 +1,13 @@
 //
-//  ChoiceFrontOnlyImageView.swift
+//  Multi_ChoiceFrontOnlyImageView.swift
 //  Cherry
 //
-//  Created by mac on 2022/11/29.
+//  Created by mac on 2022/11/30.
 //
 
 import SwiftUI
 
-struct ChoiceFrontOnlyImageView: View {
+struct Multi_ChoiceFrontOnlyImageView: View {
     @Binding var stack: NavigationPath
     @State private var nftCollectionName: String = ""
     @State private var nftName: String = ""
@@ -33,14 +33,14 @@ struct ChoiceFrontOnlyImageView: View {
                 .resizable()
                 .frame(width: 75, height: 75)
                 .position(x:260, y: 550)
-            NavigationLink("다음", destination: FinalCreatingStepView(stack: $stack))
+            NavigationLink("다음", destination: ChoiceBehindDescriptionView(stack: $stack))
                 .position(x: 150, y: 620)
         }.frame(width: 300, height: 600)
     }
 }
 
-struct ChoiceFrontOnlyImageView_Previews: PreviewProvider {
+struct Multi_ChoiceFrontOnlyImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ChoiceFrontOnlyImageView(stack: Binding.constant(NavigationPath()))
+        Multi_ChoiceFrontOnlyImageView(stack: Binding.constant(NavigationPath()))
     }
 }
