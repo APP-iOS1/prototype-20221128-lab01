@@ -28,7 +28,7 @@ struct ContentView: View {
             }.tag(2)
             
             AddView().tabItem {
-                Image(systemName: "plus.circle")
+                Image(systemName: "qrcode.viewfinder")
             }.tag(3)
     
             TempView().tabItem {

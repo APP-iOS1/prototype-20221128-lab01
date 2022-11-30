@@ -67,8 +67,9 @@ struct Home: View {
                             .frame(width:50, height: 50)
                     }
                     
-                }.padding(20)
-                    .offset(x:150, y:300)
+                }
+                .padding(20)
+                .offset(x:150, y:300)
             }
             .sheet(isPresented: $isShowingSheet,onDismiss: didDismiss) {
                 MyMenuView(isShowingSheet: $isShowingSheet)
