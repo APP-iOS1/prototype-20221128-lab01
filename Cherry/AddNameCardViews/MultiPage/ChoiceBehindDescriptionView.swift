@@ -14,6 +14,9 @@ struct ChoiceBehindDescriptionView: View {
     @State private var whoamI: String = ""
     @State private var interesting: String = ""
     @State private var mbti: String = ""
+    @State private var phoneNumber: String = ""
+    @State private var emailAddress: String = ""
+    @State private var snsLink: String = ""
     var body: some View {
         VStack{
             HStack{
@@ -30,10 +33,13 @@ struct ChoiceBehindDescriptionView: View {
                     Text("Description")
                     Spacer()
                 }
-                TextField("소개를 써주세요", text: $description, axis: .vertical)
-                    .lineLimit(3, reservesSpace: true)
-                    .textFieldStyle(.roundedBorder)
+                VStack{
+                    TextField("소개를 써주세요", text: $description, axis: .vertical)
+                        .lineLimit(5, reservesSpace: true)
+                        .textFieldStyle(.roundedBorder)
+                }
             }
+            
             VStack{
                 HStack{
                     Image(systemName: "book.fill")
@@ -45,16 +51,51 @@ struct ChoiceBehindDescriptionView: View {
                 HStack{
                     VStack{
                         Text("I AM")
+                            .font(.footnote)
                         TextField("역할", text: $whoamI)
+                            .font(.footnote)
+                            .fontWeight(.bold)
+                            .multilineTextAlignment(.center)
                     }
                     VStack{
-                        Text("INTERSETEND IN")
+                        Text("INTERSETE IN")
+                            .font(.footnote)
                         TextField("흥미", text: $interesting)
+                            .font(.footnote)
+                            .fontWeight(.bold)
+                            .multilineTextAlignment(.center)
                     }
                     VStack{
                         Text("MBTI")
+                            .font(.footnote)
                         TextField("MBTI", text: $mbti)
+                            .font(.footnote)
+                            .fontWeight(.bold)
+                            .multilineTextAlignment(.center)
                     }
+                }
+            }
+            VStack{
+                HStack{
+                    Image(systemName: "iphone.homebutton.circle")
+                    TextField("핸드폰 번호", text: $phoneNumber)
+                        .font(.footnote)
+                        .fontWeight(.light)
+                        .padding(5)
+                }
+                HStack{
+                    Image(systemName: "envelope.circle.fill")
+                    TextField("이메일", text: $emailAddress)
+                        .font(.footnote)
+                        .fontWeight(.light)
+                        .padding(5)
+                }
+                HStack{
+                    Image(systemName: "link.circle")
+                    TextField("SNS 주소", text: $snsLink)
+                        .font(.footnote)
+                        .fontWeight(.light)
+                        .padding(5)
                 }
             }
             NavigationLink("다음", destination: FinalCreatingStepView(firstNaviLinkActive: $firstNaviLinkActive))
