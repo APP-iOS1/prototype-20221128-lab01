@@ -136,7 +136,6 @@ struct toolBarButton: View {
             
         } label: {
             Image(systemName: "\(image)")
-                .foregroundColor(.black)
         }
     }
 }
