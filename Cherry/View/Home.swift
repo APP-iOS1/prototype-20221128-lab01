@@ -17,8 +17,12 @@ struct Home: View {
     @State var isShowingDetailSheet: Bool = false
     @State var isShowingDeleteAlert: Bool = false
     
+    // 정상적인 방법은 setAverageColor()가 string([string] x) 값을 받아 backgroundColor를 바꿔줘야 한다
+    // currentIndex에 맞춰서 색이 변해야 하는데 안됨. snapCarousel 파일을 이해 못 해서 그런 듯
     @State private var backgroundColor: Color = .clear
-    
+        
+    // 임시방편 averageColor 버전 근데 이것도 안됨
+    @State private var imageArr: [String] = ["NFTcard1", "NFTcard2", "NFTcard3", "NFTcard4"]
     
     var body: some View {
         
@@ -60,7 +64,7 @@ struct Home: View {
                     
                     CardView(post: post)
                         .onAppear {
-                            setAverageColor(image: post.frontImg)
+                            setAverageColor(image: imageArr)
                         }
                     
                 }
@@ -156,8 +160,8 @@ struct Home: View {
         //...
     }
     
-    private func setAverageColor(image: String) {
-        let uiColor = UIImage(named: image)?.averageColor ?? .clear
+    private func setAverageColor(image: [String]) {
+        let uiColor = UIImage(named: image[currentIndex])?.averageColor ?? .clear
         backgroundColor = Color(uiColor)
     }
     
