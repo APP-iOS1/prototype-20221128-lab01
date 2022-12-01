@@ -17,6 +17,9 @@ struct Home: View {
     @State var isShowingDetailSheet: Bool = false
     @State var isShowingDeleteAlert: Bool = false
     
+    // 카드 디테일 버튼 동작 애니메이션
+    @State var animate: Bool = false
+    
     @State var detailButtonActivate: Bool = false
     
     @State var selectedAction: String = "수정하기"
@@ -71,12 +74,7 @@ struct Home: View {
                         .onAppear {
                             setAverageColor(image: imageArr)
                         }
-//                        .padding(.vertical, -40)
-//                        .padding(.horizontal, 10)
-//                        .padding(.bottom, 30)
-//                        .background {
-//                            Color.green
-//                        }
+                        
                     
                 }
                 .offset(y: getRect().height / 4)
@@ -117,82 +115,20 @@ struct Home: View {
                 CardFlipView(frontImage:post.frontImg, backImage: post.backImg, width: proxy.size.width/1.0, height: proxy.size.height/1.0)
                     .frame(width: proxy.size.width, height: proxy.size.height / 4)
                     .shadow(radius: 10)
-//                    .cornerRadius(25)
-//                    .background {
-//                        Color.red
-//                    }
                     
             }
-//            .padding(20)
-//            .cornerRadius(25)
-//            .frame(height: getRect().height / 2.5)
-//            .frame(height: 500)
-            
-//            .background {
-//                Color.blue
-//            }
             
             // MARK: context menu가 담긴 버튼
             
             CardEditButtonView(isAnimating: $detailButtonActivate)
                 .shadow(radius: 10)
                 
-                
-            
-//            Picker("choose action", selection: $selectedAction) {
-//                ForEach(actions, id: \.self) { act in
-//                    Text(act)
-//                }
-//            }
-//            .frame(width: 130)
-//            .pickerStyle(.automatic)
-//            .padding(.top, -100)
-//            .padding(.leading, 140)
-            
-//            .padding(EdgeInsets(top: -100, leading: 200, bottom: 0, trailing: 0))
-            
-//            Button {
-//
-//            } label: {
-//                Image(systemName: "line.3.horizontal.circle")
-//                    .font(.title2)
-//                    .foregroundColor(.gray)
-//            }
-//            .contextMenu {
-//                Button {
-//                    print("수정하기")
-//                } label: {
-//                    Text("수정하기")
-//                    Image(systemName: "paintbrush")
-//                }
-//                Button {
-//                    print("공유하기")
-//                } label: {
-//                    Text("공유하기")
-//                    Image(systemName: "paintbrush")
-//                }
-//                Button {
-//                    isShowingDetailSheet.toggle()
-//                } label: {
-//                    Text("자세히 보기")
-//                    Image(systemName: "paintbrush")
-//                }
-//                Divider()
-//                Button(role: .destructive) {
-//                    print("삭제하기")
-//                } label: {
-//                    Text("삭제하기")
-//                        .foregroundColor(.red)
-//                    Image(systemName: "paintbrush")
-//                }
-//            }
-            // button
-            
-            
-            
-        }.sheet(isPresented: $isShowingDetailSheet) {
+        }
+        
+        .sheet(isPresented: $isShowingDetailSheet) {
             DetailView()
         }
+        
     }
     
     
@@ -204,7 +140,6 @@ struct Home: View {
         let uiColor = UIImage(named: image[currentIndex])?.averageColor ?? .clear
         backgroundColor = Color(uiColor)
     }
-    
     
 }
 
