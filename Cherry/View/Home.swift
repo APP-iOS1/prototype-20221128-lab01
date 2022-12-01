@@ -31,7 +31,7 @@ struct Home: View {
     
     var body: some View {
         
-        NavigationStack {
+        NavigationView {
             ZStack {
                 backgroundColor
                     .opacity(0.5)
@@ -85,7 +85,8 @@ struct Home: View {
                 //                TopItemView(isShowingCamera: $isShowingCamera, isShowingSheet: $isShowingSheet)
                 //                    .position(x:200,y:10)
                 HStack{
-                    NavigationLink(destination: ChoiceNameCardTypeView(firstNaviLinkActive: $firstNaviLinkActive), isActive: $firstNaviLinkActive){
+                    NavigationLink(destination: ChoiceNameCardTypeView(firstNaviLinkActive: $firstNaviLinkActive), isActive: $firstNaviLinkActive)
+                    {
                         Image(systemName: "plus.circle")
                             .resizable()
                             .frame(width:50, height: 50)
