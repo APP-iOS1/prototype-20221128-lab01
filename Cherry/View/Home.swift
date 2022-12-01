@@ -103,9 +103,10 @@ struct Home: View {
             //CardButtonView()
             GeometryReader { proxy in
                 
-                CardFlipView(frontImage:post.frontImg, backImage: post.backImg, width: proxy.size.width/1.3, height: proxy.size.height/1.3)
+                CardFlipView(frontImage:post.frontImg, backImage: post.backImg, width: proxy.size.width/1.1, height: proxy.size.height/1.1)
                     .frame(width: proxy.size.width, height: proxy.size.height)
                     .cornerRadius(25)
+                    .shadow(radius: 15)
             }
             .padding(15)
             .cornerRadius(25)
