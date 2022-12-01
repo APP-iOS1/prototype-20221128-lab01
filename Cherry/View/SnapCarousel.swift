@@ -33,6 +33,8 @@ struct SnapCarousel<Content: View, T: Identifiable>: View {
     @GestureState var offset: CGFloat = 0
     @State var currentIndex: Int = 0
     
+    @State private var backgroundColor: Color = .clear
+    
     var body: some View {
         
         
@@ -51,6 +53,7 @@ struct SnapCarousel<Content: View, T: Identifiable>: View {
                     content(item)
                         .frame(width: proxy.size.width - trailingSpace)
                         .offset(y: getOffset(item: item, width: width))
+
                 }
             }
             //spacing will be horizontal padding....
@@ -131,6 +134,7 @@ struct SnapCarousel<Content: View, T: Identifiable>: View {
         } ?? 0
         return index
     }
+
 }
 
 struct Home_PreviewsCarousel: PreviewProvider {

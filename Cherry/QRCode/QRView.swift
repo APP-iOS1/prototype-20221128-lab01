@@ -9,34 +9,71 @@ import SwiftUI
 import CodeScanner
 
 struct QRView: View {
-    @State private var isShowingScanner = false
+    @State private var isShowingScanner: Bool = false
+    @State var scannedCode: String = "https://www.google.com/"
+    @State var safariOpened: Bool = false
+    @State var showSafari: Bool = true
     
-    var body: some View {
-//        Button(action: {
-//            self.isShowingScanner = true
-//        }) {
-//            Text("Scan QR Code")
-//        }
-//        .sheet(isPresented: $isShowingScanner) {
+    var scannerSheet: some View {
+
         CodeScannerView(
             codeTypes: [.qr],
-            simulatedData: "Some simulated data",
-            completion: self.handleScan
+//            simulatedData: "Some simulated data",
+            completion: { result in
+                if case let .success(code) = result {
+                    self.scannedCode = code.string
+                    self.isShowingScanner = false
+                    self.safariOpened = true
+                }
+            }
         )
 //        }
     }
     
-    func handleScan(result: Result<ScanResult, ScanError>) {
-        isShowingScanner = false
+    var body: some View {
         
-        switch result {
-        case .success(let result):
-            let details = result.string.components(separatedBy: "\n")
-            guard details.count == 2 else { return }
-
+        VStack {
             
-        case .failure(let error):
-            print("Scanning failed: \(error.localizedDescription)")
+            if safariOpened {
+                ZStack {
+                    SafariView(showSafari: $showSafari, url: URL(string: scannedCode)!)
+                    
+                    Button {
+                        self.isShowingScanner = true
+                    } label: {
+                        Text("QR 코드 다시 스캔")
+                            .foregroundColor(.white)
+                            .padding(5)
+                            .background(Color.pink)
+                            .cornerRadius(10)
+                    }
+                    .offset(x:120, y:290)
+                    .sheet(isPresented: $isShowingScanner) {
+                        self.scannerSheet
+                    }
+                    
+                }
+            } else {
+                Spacer()
+                
+                Button {
+                    self.isShowingScanner = true
+                } label: {
+                    Text("QR 코드 스캔하기")
+                        .foregroundColor(.white)
+                        .padding(10)
+                        .background(Color.pink)
+                        .cornerRadius(10)
+                        .padding(.bottom, 20)
+                }
+                .sheet(isPresented: $isShowingScanner) {
+                    self.scannerSheet
+                }
+            }
+            
+
         }
+        
     }
+    
 }
