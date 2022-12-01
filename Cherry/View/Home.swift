@@ -17,6 +17,11 @@ struct Home: View {
     @State var isShowingDetailSheet: Bool = false
     @State var isShowingDeleteAlert: Bool = false
     
+    @State var detailButtonActivate: Bool = false
+    
+    @State var selectedAction: String = "수정하기"
+    var actions = ["수정하기", "공유하기", "자세히보기", "삭제하기"]
+    
     // 정상적인 방법은 setAverageColor()가 string([string] x) 값을 받아 backgroundColor를 바꿔줘야 한다
     // currentIndex에 맞춰서 색이 변해야 하는데 안됨. snapCarousel 파일을 이해 못 해서 그런 듯
     @State private var backgroundColor: Color = .clear
@@ -26,7 +31,7 @@ struct Home: View {
     
     var body: some View {
         
-        NavigationView {
+        NavigationStack {
             ZStack {
                 backgroundColor
                     .opacity(0.5)
@@ -66,6 +71,12 @@ struct Home: View {
                         .onAppear {
                             setAverageColor(image: imageArr)
                         }
+//                        .padding(.vertical, -40)
+//                        .padding(.horizontal, 10)
+//                        .padding(.bottom, 30)
+//                        .background {
+//                            Color.green
+//                        }
                     
                 }
                 .offset(y: getRect().height / 4)
@@ -98,56 +109,85 @@ struct Home: View {
     @ViewBuilder
     func CardView(post: Post) -> some View {
         
-        VStack(spacing: 10) {
+        ZStack {
             
             //CardButtonView()
             GeometryReader { proxy in
                 
-                CardFlipView(frontImage:post.frontImg, backImage: post.backImg, width: proxy.size.width/1.3, height: proxy.size.height/1.3)
-                    .frame(width: proxy.size.width, height: proxy.size.height)
-                    .cornerRadius(25)
+                CardFlipView(frontImage:post.frontImg, backImage: post.backImg, width: proxy.size.width/1.0, height: proxy.size.height/1.0)
+                    .frame(width: proxy.size.width, height: proxy.size.height / 4)
+                    .shadow(radius: 10)
+//                    .cornerRadius(25)
+//                    .background {
+//                        Color.red
+//                    }
+                    
             }
-            .padding(15)
-            .cornerRadius(25)
-            .frame(height: getRect().height / 2.5)
+//            .padding(20)
+//            .cornerRadius(25)
+//            .frame(height: getRect().height / 2.5)
+//            .frame(height: 500)
+            
+//            .background {
+//                Color.blue
+//            }
             
             // MARK: context menu가 담긴 버튼
-            Button {
+            
+            CardEditButtonView(isAnimating: $detailButtonActivate)
+                .shadow(radius: 10)
                 
-            } label: {
-                Image(systemName: "line.3.horizontal.circle")
-                    .font(.title2)
-                    .foregroundColor(.gray)
-            }
-            .contextMenu {
-                Button {
-                    print("수정하기")
-                } label: {
-                    Text("수정하기")
-                    Image(systemName: "paintbrush")
-                }
-                Button {
-                    print("공유하기")
-                } label: {
-                    Text("공유하기")
-                    Image(systemName: "paintbrush")
-                }
-                Button {
-                    isShowingDetailSheet.toggle()
-                } label: {
-                    Text("자세히 보기")
-                    Image(systemName: "paintbrush")
-                }
-                Divider()
-                Button(role: .destructive) {
-                    print("삭제하기")
-                } label: {
-                    Text("삭제하기")
-                        .foregroundColor(.red)
-                    Image(systemName: "paintbrush")
-                }
-            } // button
-            .padding(EdgeInsets(top: -33, leading: 135, bottom: 0, trailing: 0))
+                
+            
+//            Picker("choose action", selection: $selectedAction) {
+//                ForEach(actions, id: \.self) { act in
+//                    Text(act)
+//                }
+//            }
+//            .frame(width: 130)
+//            .pickerStyle(.automatic)
+//            .padding(.top, -100)
+//            .padding(.leading, 140)
+            
+//            .padding(EdgeInsets(top: -100, leading: 200, bottom: 0, trailing: 0))
+            
+//            Button {
+//
+//            } label: {
+//                Image(systemName: "line.3.horizontal.circle")
+//                    .font(.title2)
+//                    .foregroundColor(.gray)
+//            }
+//            .contextMenu {
+//                Button {
+//                    print("수정하기")
+//                } label: {
+//                    Text("수정하기")
+//                    Image(systemName: "paintbrush")
+//                }
+//                Button {
+//                    print("공유하기")
+//                } label: {
+//                    Text("공유하기")
+//                    Image(systemName: "paintbrush")
+//                }
+//                Button {
+//                    isShowingDetailSheet.toggle()
+//                } label: {
+//                    Text("자세히 보기")
+//                    Image(systemName: "paintbrush")
+//                }
+//                Divider()
+//                Button(role: .destructive) {
+//                    print("삭제하기")
+//                } label: {
+//                    Text("삭제하기")
+//                        .foregroundColor(.red)
+//                    Image(systemName: "paintbrush")
+//                }
+//            }
+            // button
+            
             
             
         }.sheet(isPresented: $isShowingDetailSheet) {

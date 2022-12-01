@@ -39,6 +39,8 @@
 		1829E45A2937A37B006F72AE /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829E4592937A37A006F72AE /* TestView.swift */; };
 		1829E45E2937AE5F006F72AE /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829E45D2937AE5F006F72AE /* UIImage+Extension.swift */; };
 		189725042935E90B00383864 /* ProfilePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189725032935E90B00383864 /* ProfilePickerView.swift */; };
+		189A28C72938851100B9ED36 /* CardEditButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189A28C62938851100B9ED36 /* CardEditButtonView.swift */; };
+		189A28C92938856000B9ED36 /* CarEditButtExpandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189A28C82938856000B9ED36 /* CarEditButtExpandingView.swift */; };
 		18FCD1422935D8FF00AAB9CE /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 18FCD1412935D8FF00AAB9CE /* CodeScanner */; };
 		18FCD1442935D9BA00AAB9CE /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCD1432935D9BA00AAB9CE /* QRView.swift */; };
 		18FCD1482935E03300AAB9CE /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCD1472935E03300AAB9CE /* MyProfileView.swift */; };
@@ -86,6 +88,8 @@
 		1829E4592937A37A006F72AE /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		1829E45D2937AE5F006F72AE /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		189725032935E90B00383864 /* ProfilePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickerView.swift; sourceTree = "<group>"; };
+		189A28C62938851100B9ED36 /* CardEditButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardEditButtonView.swift; sourceTree = "<group>"; };
+		189A28C82938856000B9ED36 /* CarEditButtExpandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEditButtExpandingView.swift; sourceTree = "<group>"; };
 		18FCD13D2935D34300AAB9CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		18FCD1432935D9BA00AAB9CE /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		18FCD1472935E03300AAB9CE /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 				189725032935E90B00383864 /* ProfilePickerView.swift */,
 				140E9759293726E100E85F5D /* CardCollection.swift */,
 				140E97572937200A00E85F5D /* SearchBar.swift */,
+				189A28C62938851100B9ED36 /* CardEditButtonView.swift */,
+				189A28C82938856000B9ED36 /* CarEditButtExpandingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -368,12 +374,14 @@
 				049C46522935C6AE00B9BEC0 /* ChoiceNameCardTypeView.swift in Sources */,
 				1829E45E2937AE5F006F72AE /* UIImage+Extension.swift in Sources */,
 				045211BD293716BD000B0112 /* Multi_ChoiceFrontNamecardView.swift in Sources */,
+				189A28C72938851100B9ED36 /* CardEditButtonView.swift in Sources */,
 				049C46462935BDF300B9BEC0 /* ChoiceFrontNamecardView.swift in Sources */,
 				06B5280A291A2A7B00ACFB0D /* UsersView.swift in Sources */,
 				189725042935E90B00383864 /* ProfilePickerView.swift in Sources */,
 				041764CC2925BD7C0033C3F5 /* WalletButtonView.swift in Sources */,
 				06365E84291CDEAE00CF1D3C /* DetailView.swift in Sources */,
 				049C464A2935BE3000B9BEC0 /* ChoiceFrontOnlyImageView.swift in Sources */,
+				189A28C92938856000B9ED36 /* CarEditButtExpandingView.swift in Sources */,
 				140E975A293726E100E85F5D /* CardCollection.swift in Sources */,
 				F350A8A5291B343D00A9B9FF /* SnapCarousel.swift in Sources */,
 				18FCD1442935D9BA00AAB9CE /* QRView.swift in Sources */,

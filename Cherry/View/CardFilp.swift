@@ -20,7 +20,7 @@ struct CardFront : View {
             .resizable()
             .frame(width: width,height: height)
             .padding(15)
-            .background(Color.white)
+//            .background(Color.white)
             .cornerRadius(25)
             .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
             
@@ -38,7 +38,7 @@ struct CardBack : View {
             .resizable()
             .frame(width: width,height: height)
             .padding(15)
-            .background(Color.white)
+//            .background(Color.white)
             .cornerRadius(25)
             .rotation3DEffect(Angle(degrees: degree), axis: (x: 0, y: 1, z: 0))
     }
@@ -93,8 +93,8 @@ struct CardFlipView: View {
                 
             }
         ZStack {
-            CardFront(image: frontImage, degree: $frontDegree, width: width, height: height)
-            CardBack(image: backImage,degree: $backDegree, width: width, height: height)
+            CardFront(image: frontImage, degree: $frontDegree, width: 250, height: 350)
+            CardBack(image: backImage,degree: $backDegree, width: 250, height: 350)
         }.onTapGesture {
             flipCard()
         }

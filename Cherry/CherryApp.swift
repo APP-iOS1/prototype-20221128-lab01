@@ -11,8 +11,8 @@ import SwiftUI
 struct CherryApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView(logoutAction: {})
-            TestView()
+            ContentView(logoutAction: {})
+//            TestView()
         }
     }
 }
