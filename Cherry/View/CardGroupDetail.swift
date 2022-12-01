@@ -7,21 +7,30 @@
 
 import SwiftUI
 
+
 struct CardGroupDetail: View {
+    
+    @State private var searchDetail = ""
     var body: some View {
         VStack{
             Text("그룹1")
                 .font(.largeTitle)
-            Rectangle()
-                    .padding(.horizontal)
-                    .frame(height: 2)
-                    .foregroundColor(Color("MainColor"))
+                .bold()
+                .foregroundColor(Color("MainColor"))
+            SearchBar(text: $searchDetail)
+                .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+
+//            Rectangle()
+//                    .padding(.horizontal)
+//                    .frame(height: 2)
+//                    .foregroundColor(Color("MainColor"))
             ScrollView{
                 Grid {
                     GridRow {
                         Image("NFTcard1")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
+                        
 
                         Image("NFTcard2")
                             .resizable()

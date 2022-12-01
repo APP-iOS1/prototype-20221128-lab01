@@ -14,7 +14,9 @@ struct ChoiceFrontNamecardView: View {
     var body: some View {
         VStack{
             HStack{
-                Text("앞면에 들어갈 템플릿을 선택해 주세요")
+                Text("앞면에 들어갈 템플릿을 선택해 주세요.")
+                    .font(.largeTitle)
+
             }.padding(20)
             HStack{
                 Spacer()

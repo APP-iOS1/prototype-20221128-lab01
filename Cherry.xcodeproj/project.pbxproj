@@ -39,13 +39,15 @@
 		1829E45A2937A37B006F72AE /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829E4592937A37A006F72AE /* TestView.swift */; };
 		1829E45E2937AE5F006F72AE /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829E45D2937AE5F006F72AE /* UIImage+Extension.swift */; };
 		189725042935E90B00383864 /* ProfilePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189725032935E90B00383864 /* ProfilePickerView.swift */; };
+		189A28C72938851100B9ED36 /* CardEditButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189A28C62938851100B9ED36 /* CardEditButtonView.swift */; };
+		189A28C92938856000B9ED36 /* CarEditButtExpandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189A28C82938856000B9ED36 /* CarEditButtExpandingView.swift */; };
 		18FCD1422935D8FF00AAB9CE /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 18FCD1412935D8FF00AAB9CE /* CodeScanner */; };
 		18FCD1442935D9BA00AAB9CE /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCD1432935D9BA00AAB9CE /* QRView.swift */; };
 		18FCD1482935E03300AAB9CE /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCD1472935E03300AAB9CE /* MyProfileView.swift */; };
 		2D7FDB60291CC2BB0050AFC4 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7FDB5F291CC2BB0050AFC4 /* MyPageView.swift */; };
 		2D7FDB62291CD0450050AFC4 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7FDB61291CD0450050AFC4 /* AddView.swift */; };
 		2D7FDB64291CD0A40050AFC4 /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7FDB63291CD0A40050AFC4 /* TempView.swift */; };
-		ADBF23D729387C1800FC8E7E /* CardGroupDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBF23D629387C1800FC8E7E /* CardGroupDetail.swift */; };
+		AD4F30A02938EC2400A15A93 /* CardGroupDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4F309F2938EC2400A15A93 /* CardGroupDetail.swift */; };
 		F350A8A5291B343D00A9B9FF /* SnapCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F350A8A3291B343C00A9B9FF /* SnapCarousel.swift */; };
 		F350A8A6291B343D00A9B9FF /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F350A8A4291B343C00A9B9FF /* Home.swift */; };
 		F350A8AB291B366500A9B9FF /* CardFilp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F350A8AA291B366500A9B9FF /* CardFilp.swift */; };
@@ -87,13 +89,15 @@
 		1829E4592937A37A006F72AE /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		1829E45D2937AE5F006F72AE /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		189725032935E90B00383864 /* ProfilePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePickerView.swift; sourceTree = "<group>"; };
+		189A28C62938851100B9ED36 /* CardEditButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardEditButtonView.swift; sourceTree = "<group>"; };
+		189A28C82938856000B9ED36 /* CarEditButtExpandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarEditButtExpandingView.swift; sourceTree = "<group>"; };
 		18FCD13D2935D34300AAB9CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		18FCD1432935D9BA00AAB9CE /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		18FCD1472935E03300AAB9CE /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
 		2D7FDB5F291CC2BB0050AFC4 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		2D7FDB61291CD0450050AFC4 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		2D7FDB63291CD0A40050AFC4 /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
-		ADBF23D629387C1800FC8E7E /* CardGroupDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGroupDetail.swift; sourceTree = "<group>"; };
+		AD4F309F2938EC2400A15A93 /* CardGroupDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGroupDetail.swift; sourceTree = "<group>"; };
 		F350A8A3291B343C00A9B9FF /* SnapCarousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapCarousel.swift; sourceTree = "<group>"; };
 		F350A8A4291B343C00A9B9FF /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		F350A8AA291B366500A9B9FF /* CardFilp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFilp.swift; sourceTree = "<group>"; };
@@ -247,10 +251,12 @@
 				F350A8AA291B366500A9B9FF /* CardFilp.swift */,
 				06365E81291CD48200CF1D3C /* testView.swift */,
 				18FCD1472935E03300AAB9CE /* MyProfileView.swift */,
+				AD4F309F2938EC2400A15A93 /* CardGroupDetail.swift */,
 				189725032935E90B00383864 /* ProfilePickerView.swift */,
 				140E9759293726E100E85F5D /* CardCollection.swift */,
-				ADBF23D629387C1800FC8E7E /* CardGroupDetail.swift */,
 				140E97572937200A00E85F5D /* SearchBar.swift */,
+				189A28C62938851100B9ED36 /* CardEditButtonView.swift */,
+				189A28C82938856000B9ED36 /* CarEditButtExpandingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -343,7 +349,6 @@
 			files = (
 				F350A8AB291B366500A9B9FF /* CardFilp.swift in Sources */,
 				06B5280C291A2A8800ACFB0D /* MyView.swift in Sources */,
-				ADBF23D729387C1800FC8E7E /* CardGroupDetail.swift in Sources */,
 				2D7FDB62291CD0450050AFC4 /* AddView.swift in Sources */,
 				04AED848292D00F500CF015C /* FirstSettingSNSLinkView.swift in Sources */,
 				06B527FE291A290500ACFB0D /* ContentView.swift in Sources */,
@@ -356,6 +361,7 @@
 				2D7FDB60291CC2BB0050AFC4 /* MyPageView.swift in Sources */,
 				1829E4582937923C006F72AE /* SafariView.swift in Sources */,
 				0479BA45292C531100910CD9 /* Result1.swift in Sources */,
+				AD4F30A02938EC2400A15A93 /* CardGroupDetail.swift in Sources */,
 				04AED846292CFD7700CF015C /* FirstSettingNickNameView.swift in Sources */,
 				06B527FC291A290500ACFB0D /* CherryApp.swift in Sources */,
 				045211BB29371683000B0112 /* Multi_ChoiceFrontImageNTextView.swift in Sources */,
@@ -372,12 +378,14 @@
 				049C46522935C6AE00B9BEC0 /* ChoiceNameCardTypeView.swift in Sources */,
 				1829E45E2937AE5F006F72AE /* UIImage+Extension.swift in Sources */,
 				045211BD293716BD000B0112 /* Multi_ChoiceFrontNamecardView.swift in Sources */,
+				189A28C72938851100B9ED36 /* CardEditButtonView.swift in Sources */,
 				049C46462935BDF300B9BEC0 /* ChoiceFrontNamecardView.swift in Sources */,
 				06B5280A291A2A7B00ACFB0D /* UsersView.swift in Sources */,
 				189725042935E90B00383864 /* ProfilePickerView.swift in Sources */,
 				041764CC2925BD7C0033C3F5 /* WalletButtonView.swift in Sources */,
 				06365E84291CDEAE00CF1D3C /* DetailView.swift in Sources */,
 				049C464A2935BE3000B9BEC0 /* ChoiceFrontOnlyImageView.swift in Sources */,
+				189A28C92938856000B9ED36 /* CarEditButtExpandingView.swift in Sources */,
 				140E975A293726E100E85F5D /* CardCollection.swift in Sources */,
 				F350A8A5291B343D00A9B9FF /* SnapCarousel.swift in Sources */,
 				18FCD1442935D9BA00AAB9CE /* QRView.swift in Sources */,
@@ -510,7 +518,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cherry/Preview Content\"";
-				DEVELOPMENT_TEAM = NJ3XY7UG88;
+				DEVELOPMENT_TEAM = 99KS64JD42;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cherry/Info.plist;
@@ -526,7 +534,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jjhhssdfger;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jjhhs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -542,7 +550,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cherry/Preview Content\"";
-				DEVELOPMENT_TEAM = NJ3XY7UG88;
+				DEVELOPMENT_TEAM = 99KS64JD42;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Cherry/Info.plist;
@@ -558,7 +566,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jjhhssdfger;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jjhhs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

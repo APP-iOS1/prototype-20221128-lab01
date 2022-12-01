@@ -15,10 +15,10 @@ struct QRView: View {
     @State var showSafari: Bool = true
     
     var scannerSheet: some View {
-
+        
         CodeScannerView(
             codeTypes: [.qr],
-//            simulatedData: "Some simulated data",
+            //            simulatedData: "Some simulated data",
             completion: { result in
                 if case let .success(code) = result {
                     self.scannedCode = code.string
@@ -27,53 +27,76 @@ struct QRView: View {
                 }
             }
         )
-//        }
+        //        }
     }
     
     var body: some View {
-        
-        VStack {
-            
-            if safariOpened {
-                ZStack {
-                    SafariView(showSafari: $showSafari, url: URL(string: scannedCode)!)
+        ZStack {
+            Color(UIColor.systemGray6)
+                .edgesIgnoringSafeArea(.top)
+            VStack {
+                
+                if safariOpened {
+                    ZStack {
+                        SafariView(showSafari: $showSafari, url: URL(string: scannedCode)!)
+                        
+                        Button {
+                            self.isShowingScanner = true
+                        } label: {
+                            Text("QR 코드 다시 스캔")
+                                .foregroundColor(.white)
+                                .padding(5)
+                                .background(Color.pink)
+                                .cornerRadius(10)
+                        }
+                        .offset(x:120, y:290)
+                        .sheet(isPresented: $isShowingScanner) {
+                            self.scannerSheet
+                        }
+                        
+                    }
+                } else {
+                    Spacer()
                     
                     Button {
                         self.isShowingScanner = true
                     } label: {
-                        Text("QR 코드 다시 스캔")
-                            .foregroundColor(.white)
-                            .padding(5)
-                            .background(Color.pink)
-                            .cornerRadius(10)
+                        VStack {
+                            Image(systemName: "qrcode.viewfinder")
+                                .resizable()
+                                .frame(width:150, height: 150)
+                                .padding()
+                                .background(Color.white)
+                                .cornerRadius(10)
+                                .foregroundColor(.black)
+                                .border(.black, width: 5)
+                            
+                            
+                            
+                            //                        Text("QR 코드 스캔하기")
+                            //                            .foregroundColor(.white)
+                            //                            .padding(10)
+                            //                            .background(Color.pink)
+                            //                            .cornerRadius(10)
+                            //                            .padding(.bottom, 20)
+                        }
                     }
-                    .offset(x:120, y:290)
                     .sheet(isPresented: $isShowingScanner) {
                         self.scannerSheet
                     }
+                    .padding()
+                    Text("상대방의 명함을 QR코드로 스캔하여 가져오세요!")
+                        .font(.title)
+                        .fontWeight(.bold)
                     
                 }
-            } else {
                 Spacer()
-                
-                Button {
-                    self.isShowingScanner = true
-                } label: {
-                    Text("QR 코드 스캔하기")
-                        .foregroundColor(.white)
-                        .padding(10)
-                        .background(Color.pink)
-                        .cornerRadius(10)
-                        .padding(.bottom, 20)
-                }
-                .sheet(isPresented: $isShowingScanner) {
-                    self.scannerSheet
-                }
             }
             
-
+            
         }
-        
     }
     
 }
+
+

@@ -21,6 +21,7 @@ struct CardCollection: View {
             HStack {
                 Text("Card Collection")
                     .font(.largeTitle)
+                    .bold()
                     .foregroundColor(Color("MainColor"))
                 Spacer()
                 Button {
@@ -34,11 +35,6 @@ struct CardCollection: View {
                 
             }
             .padding()
-            
-            Rectangle()
-                    .padding(.horizontal)
-                    .frame(height: 2)
-                    .foregroundColor(Color("MainColor"))
                 
             SearchBar(text: $searchText)
                 .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
@@ -48,7 +44,7 @@ struct CardCollection: View {
                         
                         ForEach(arr.filter{$0.contains(searchText) || searchText == ""}, id: \.self) { post in
                             
-                            NavigationLink(destination: MyView(), label: {
+                            NavigationLink(destination: CardGroupDetail(), label: {
                                 
                                 VStack(spacing: 0.1) {
                                     Image(arrImage.randomElement()!)

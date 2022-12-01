@@ -14,6 +14,7 @@ struct ChoiceNameCardTypeView: View {
         
         VStack{
             Text("명함의 타입을 선택해 주세요")
+                .font(.largeTitle)
                 .padding(20)
             HStack{
                 Spacer()
