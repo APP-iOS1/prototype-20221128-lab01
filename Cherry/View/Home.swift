@@ -142,7 +142,7 @@ struct Home: View {
             
             CardEditButtonView(isAnimating: $detailButtonActivate)
                 .shadow(radius: 10)
-                .offset(y: 40)
+                .offset(y: 50)
                 
                 
             
