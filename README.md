@@ -1,4 +1,4 @@
-# <img width="70" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048142749808992307/ezgif.com-gif-maker_1_2.gif">
+# <img width="70" src="https://mintspace-media.fra1.digitaloceanspaces.com/wp-content/uploads/2021/12/26102910/IMG_20211226_142829.jpg">
 # Cherry(체리)
 
 ## 앱 정의(ADS)
