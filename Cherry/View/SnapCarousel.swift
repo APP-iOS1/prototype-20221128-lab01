@@ -20,7 +20,8 @@ struct SnapCarousel<Content: View, T: Identifiable>: View {
     @Binding var index: Int
     
     // MARK: - spacing 15 -> 35 , trailingSpace 100 -> 115
-    init(spacing: CGFloat = 15, trailingSpace: CGFloat = 115, index: Binding<Int>, items:[T], @ViewBuilder content: @escaping (T) -> Content){
+    // 카드 간격 spacing
+    init(spacing: CGFloat = 60, trailingSpace: CGFloat = 115, index: Binding<Int>, items:[T], @ViewBuilder content: @escaping (T) -> Content){
         
         self.list = items
         self.spacing = spacing
@@ -38,71 +39,81 @@ struct SnapCarousel<Content: View, T: Identifiable>: View {
     var body: some View {
         
         
-        GeometryReader { proxy in
+        ZStack {
             
-            // setting correct width for snap carousel....
+            backgroundColor
+                .frame(height: UIScreen.main.bounds.height)
+                .padding(.top, -452)
             
-            // on sided snap caorusel
-            let width = proxy.size.width - (trailingSpace - spacing)
-            let adjustMentWidth = (trailingSpace / 2) - spacing
-            
-            HStack(spacing: spacing) {
+            GeometryReader { proxy in
                 
-                ForEach(list){item in
+                // setting correct width for snap carousel....
+                
+                // on sided snap caorusel
+                let width = proxy.size.width - (trailingSpace - spacing)
+                let adjustMentWidth = (trailingSpace / 2) - spacing
+                
+                HStack(spacing: spacing) {
                     
-                    content(item)
-                        .frame(width: proxy.size.width - trailingSpace)
-                        .offset(y: getOffset(item: item, width: width))
-
+                    ForEach(list){item in
+                        
+                        content(item)
+                            .frame(width: proxy.size.width - trailingSpace)
+                            .offset(y: getOffset(item: item, width: width))
+//                            .onAppear {
+//                                setAverageColor(image: item)
+//                            }
+    // averageColor 자리일지도?
+                    }
                 }
+                //spacing will be horizontal padding....
+                .padding(.horizontal, spacing)
+                // setting only after oth index...
+                .offset(x: (CGFloat(currentIndex) * -width) + (currentIndex >= 0 ? adjustMentWidth : 0) + offset)
+                .gesture(
+                
+                    DragGesture()
+                        .updating($offset, body: { value, out, _ in
+                            
+                            out = value.translation.width
+                        })
+                        .onEnded({ value in
+                            
+                            // updating current index...
+                            let offsetX = value.translation.width
+                            
+                            //were going to convert the tranlastion into progress(0- 1)
+                            //and round the value....
+                            //based on the progress increasing or decreasing the currentIndex.
+                            
+                            let progress = -offsetX / width
+                            let roundIndex = progress.rounded()
+                            
+                            currentIndex = max(min(currentIndex + Int(roundIndex), list.count - 1), 0)
+                            
+                            currentIndex = index
+                        })
+                        .onChanged({ value in
+                            
+                            //updating only index...
+                            
+                            // updating current index...
+                            let offsetX = value.translation.width
+                            
+                            //were going to convert the tranlastion into progress(0- 1)
+                            //and round the value....
+                            //based on the progress increasing or decreasing the currentIndex.
+                            
+                            let progress = -offsetX / width
+                            let roundIndex = progress.rounded()
+                            
+                            index = max(min(currentIndex + Int(roundIndex), list.count - 1), 0)
+                        })
+                )
             }
-            //spacing will be horizontal padding....
-            .padding(.horizontal, spacing)
-            // setting only after oth index...
-            .offset(x: (CGFloat(currentIndex) * -width) + (currentIndex >= 0 ? adjustMentWidth : 0) + offset)
-            .gesture(
-            
-                DragGesture()
-                    .updating($offset, body: { value, out, _ in
-                        
-                        out = value.translation.width
-                    })
-                    .onEnded({ value in
-                        
-                        // updating current index...
-                        let offsetX = value.translation.width
-                        
-                        //were going to convert the tranlastion into progress(0- 1)
-                        //and round the value....
-                        //based on the progress increasing or decreasing the currentIndex.
-                        
-                        let progress = -offsetX / width
-                        let roundIndex = progress.rounded()
-                        
-                        currentIndex = max(min(currentIndex + Int(roundIndex), list.count - 1), 0)
-                        
-                        currentIndex = index
-                    })
-                    .onChanged({ value in
-                        
-                        //updating only index...
-                        
-                        // updating current index...
-                        let offsetX = value.translation.width
-                        
-                        //were going to convert the tranlastion into progress(0- 1)
-                        //and round the value....
-                        //based on the progress increasing or decreasing the currentIndex.
-                        
-                        let progress = -offsetX / width
-                        let roundIndex = progress.rounded()
-                        
-                        index = max(min(currentIndex + Int(roundIndex), list.count - 1), 0)
-                    })
-            )
+            //Animating when offset = 0
+            .animation(.easeInOut, value: offset == 0)
         }
-        //Animating when offset = 0
-        .animation(.easeInOut, value: offset == 0)
     }
     
     //moving view based on scroll offset....
@@ -133,6 +144,11 @@ struct SnapCarousel<Content: View, T: Identifiable>: View {
             return currentItem.id == item.id
         } ?? 0
         return index
+    }
+    
+    private func setAverageColor(image: String) {
+        let uiColor = UIImage(named: image)?.averageColor ?? .clear
+        backgroundColor = Color(uiColor)
     }
 
 }

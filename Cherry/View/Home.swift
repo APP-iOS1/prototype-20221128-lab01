@@ -17,6 +17,10 @@ struct Home: View {
     @State var isShowingDetailSheet: Bool = false
     @State var isShowingDeleteAlert: Bool = false
     
+
+    // 카드 디테일 버튼 동작 애니메이션
+    @State var animate: Bool = false
+    
     @State var detailButtonActivate: Bool = false
     
     @State var selectedAction: String = "수정하기"
@@ -37,36 +41,7 @@ struct Home: View {
                         .resizable()
                         .ignoresSafeArea(.all)
 
-                    //                backgroundColor
-                    //                    .opacity(0.5)
-                    //                TabView(selection: $currentIndex) {
-                    //                    ForEach(posts.indices, id: \.self) { index in
-                    //                        GeometryReader { proxy in
-                    //                            Image(posts[index].frontImg)
-                    //                                .resizable()
-                    //                                .aspectRatio(contentMode: .fill)
-                    //                                .frame(width: proxy.size.width, height: proxy.size.height)
-                    //                                .cornerRadius(1)
-                    //                        }
-                    //                        .ignoresSafeArea()
-                    //                        .offset(y: -100)
-                    //                    }
-                    //                }
-                    //                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                    //                .animation(.easeInOut, value: currentIndex)
-                    //                .overlay(
-                    //
-                    //                    LinearGradient(colors: [
-                    //
-                    //                        Color.clear,
-                    //                        Color.black.opacity(0.2),
-                    //                        Color.white.opacity(0.4),
-                    //                        Color.white,
-                    //                        Color.white,
-                    //                        Color.white,
-                    //                    ], startPoint: .top, endPoint: .bottom)
-                    //                )
-                    //                .ignoresSafeArea()
+               
                     
                     //posts..
                     SnapCarousel(trailingSpace: getRect().height < 750 ? 100 : 150 ,index: $currentIndex, items: posts) { post in
@@ -75,13 +50,23 @@ struct Home: View {
                             .onAppear {
                                 setAverageColor(image: imageArr)
                             }
-                        //                        .padding(.vertical, -40)
-                        //                        .padding(.horizontal, 10)
-                        //                        .padding(.bottom, 30)
-                        //                        .background {
-                        //                            Color.green
-                        //                        }
+         
+                    CardView(post: post)
+                        .onAppear {
+                            setAverageColor(image: imageArr)
+                        }
                         
+                    
+                }
+                .offset(y: getRect().height / 4)
+                
+            
+                HStack{
+                    NavigationLink(destination: ChoiceNameCardTypeView(firstNaviLinkActive: $firstNaviLinkActive), isActive: $firstNaviLinkActive)
+                    {
+                        Image(systemName: "plus.circle")
+                            .resizable()
+                            .frame(width:50, height: 50)
                     }
                     .offset(y: getRect().height / 4)
                     
@@ -116,27 +101,18 @@ struct Home: View {
     func CardView(post: Post) -> some View {
         
         ZStack {
+
             //CardButtonView()
             GeometryReader { proxy in
                 
                 CardFlipView(frontImage:post.frontImg, backImage: post.backImg, width: proxy.size.width/1.0, height: proxy.size.height/1.0)
                     .frame(width: proxy.size.width, height: proxy.size.height / 4)
                     .shadow(radius: 10)
-//                    .cornerRadius(25)
-//                    .background {
-//                        Color.red
-//                    }
+
                     
             }
             .offset(y: 100)
-//            .padding(20)
-//            .cornerRadius(25)
-//            .frame(height: getRect().height / 2.5)
-//            .frame(height: 500)
-            
-//            .background {
-//                Color.blue
-//            }
+
             
             // MARK: context menu가 담긴 버튼
             
@@ -145,61 +121,21 @@ struct Home: View {
                 .offset(y: 50)
                 
                 
+
+                    
+            }
             
-//            Picker("choose action", selection: $selectedAction) {
-//                ForEach(actions, id: \.self) { act in
-//                    Text(act)
-//                }
-//            }
-//            .frame(width: 130)
-//            .pickerStyle(.automatic)
-//            .padding(.top, -100)
-//            .padding(.leading, 140)
+            // MARK: context menu가 담긴 버튼
             
-//            .padding(EdgeInsets(top: -100, leading: 200, bottom: 0, trailing: 0))
-            
-//            Button {
-//
-//            } label: {
-//                Image(systemName: "line.3.horizontal.circle")
-//                    .font(.title2)
-//                    .foregroundColor(.gray)
-//            }
-//            .contextMenu {
-//                Button {
-//                    print("수정하기")
-//                } label: {
-//                    Text("수정하기")
-//                    Image(systemName: "paintbrush")
-//                }
-//                Button {
-//                    print("공유하기")
-//                } label: {
-//                    Text("공유하기")
-//                    Image(systemName: "paintbrush")
-//                }
-//                Button {
-//                    isShowingDetailSheet.toggle()
-//                } label: {
-//                    Text("자세히 보기")
-//                    Image(systemName: "paintbrush")
-//                }
-//                Divider()
-//                Button(role: .destructive) {
-//                    print("삭제하기")
-//                } label: {
-//                    Text("삭제하기")
-//                        .foregroundColor(.red)
-//                    Image(systemName: "paintbrush")
-//                }
-//            }
-            // button
-            
-            
-            
-        }.sheet(isPresented: $isShowingDetailSheet) {
+            CardEditButtonView(isAnimating: $detailButtonActivate)
+                .shadow(radius: 10)
+                
+        }
+        
+        .sheet(isPresented: $isShowingDetailSheet) {
             DetailView()
         }
+        
     }
     
     
@@ -211,7 +147,6 @@ struct Home: View {
         let uiColor = UIImage(named: image[currentIndex])?.averageColor ?? .clear
         backgroundColor = Color(uiColor)
     }
-    
     
 }
 
