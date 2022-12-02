@@ -73,7 +73,7 @@ struct FrontTemplate1: View {
                 
                 HStack{
                     Spacer()
-                    Image("QRImage")
+                    Image("qr-code-for-scanning-free-vector")
                         .resizable()
                         .frame(width: 75, height: 75)
                 }
