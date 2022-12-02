@@ -24,74 +24,76 @@ struct ChoiceFrontInfo_SinglePage: View {
     
     var body: some View {
         VStack{
-            HStack{
-                Text("이미지 선택")
-                Spacer()
-                Button("변경"){
-                    isPresented.toggle()
-                }.sheet(isPresented: $isPresented){
-                    ChoiceImageView(choiceImageUrl: $imageUrl, isPresented: $isPresented)
-                }
-            }
-            
             VStack{
-                if(imageUrl == ""){
-                    Button("choice NFT"){
+                HStack{
+                    Text("이미지 선택")
+                    Spacer()
+                    Button("변경"){
                         isPresented.toggle()
                     }.sheet(isPresented: $isPresented){
                         ChoiceImageView(choiceImageUrl: $imageUrl, isPresented: $isPresented)
                     }
-                }else{
-                    AsyncImage(url:URL(string: imageUrl)!){ image in
-                        VStack{
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                        }
-                    }placeholder: {
-                        ProgressView()
-                    }
                 }
-            }.frame(width: 250, height: 250).padding(0)
                 
-        }
-        VStack{
-            HStack{
-                Text("nft Collection 이름")
-                Spacer()
+                VStack{
+                    if(imageUrl == ""){
+                        Button("choice NFT"){
+                            isPresented.toggle()
+                        }.sheet(isPresented: $isPresented){
+                            ChoiceImageView(choiceImageUrl: $imageUrl, isPresented: $isPresented)
+                        }
+                    }else{
+                        AsyncImage(url:URL(string: imageUrl)!){ image in
+                            VStack{
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            }
+                        }placeholder: {
+                            ProgressView()
+                        }
+                    }
+                }.frame(width: 250, height: 250).padding(0)
+                
+            }
+            VStack{
+                HStack{
+                    Text("nft Collection 이름")
+                    Spacer()
+                }
+                
+                HStack{
+                    TextField("예) DADAZ", text: $nftCollectionName)
+                    Divider()
+                    Spacer()
+                }
             }
             
-            HStack{
-                TextField("예) DADAZ", text: $nftCollectionName)
-                Divider()
-                Spacer()
+            VStack{
+                HStack{
+                    Text("nft 이름")
+                    Spacer()
+                }
+                HStack{
+                    TextField("예) Run Away", text: $nftName)
+                    Divider()
+                    Spacer()
+                }
             }
+            
+            VStack{
+                HStack{
+                    Text("nft 번호")
+                    Spacer()
+                }
+                HStack{
+                    TextField("예) #-181", text: $nftNumber)
+                    Divider()
+                    Spacer()
+                }
+            }
+            NavigationLink("다음", destination: FinalStep_SinglePageView(nftCollectionName: $nftCollectionName, nftName: $nftName, nftNumber: $nftNumber, imageUrl: $imageUrl, frontTemplateType: frontTemplateType, firstNaviLinkActive: $firstNaviLinkActive))
         }
-        
-        VStack{
-            HStack{
-                Text("nft 이름")
-                Spacer()
-            }
-            HStack{
-                TextField("예) Run Away", text: $nftName)
-                Divider()
-                Spacer()
-            }
-        }
-        
-        VStack{
-            HStack{
-                Text("nft 번호")
-                Spacer()
-            }
-            HStack{
-                TextField("예) #-181", text: $nftNumber)
-                Divider()
-                Spacer()
-            }
-        }
-        NavigationLink("다음", destination: FinalStep_SinglePageView(nftCollectionName: $nftCollectionName, nftName: $nftName, nftNumber: $nftNumber, imageUrl: $imageUrl, frontTemplateType: frontTemplateType, firstNaviLinkActive: $firstNaviLinkActive))
     }
 }
 struct ChoiceFrontInfoView_Previews: PreviewProvider{
