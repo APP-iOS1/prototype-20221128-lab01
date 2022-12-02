@@ -31,11 +31,14 @@ struct CardEditButtonView: View {
                     .onTapGesture {
                         self.isAnimating.toggle()
                     }
+                    
             }
             .frame(height: 200)
             
         }
+        
     }
+    
 }
 
 struct AddButton_Previews: PreviewProvider {
