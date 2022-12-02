@@ -42,7 +42,62 @@
 명함 크기를 키우고, 카드에 쉐딩을 주어
   더 명확하게 볼 수 있게 수정하였습니다.  
   
-<img width="209" src="https://user-images.githubusercontent.com/98198645/205234453-1fdaaddf-0f26-4542-9e25-594d1d3d9303.png"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130140019884052/ezgif.com-gif-maker_.gif"> 
+<img width="209" src="https://user-images.githubusercontent.com/98198645/205234453-1fdaaddf-0f26-4542-9e25-594d1d3d9303.png"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130140019884052/ezgif.com-gif-maker_.gif">  
+
+- 피드백  
+
+컨텍스트 메뉴가 LongPress 방식이라 
+  직관적으로 알기 어렵고, 기능 작동이 불편
+  
+- 개선방안  
+
+컨텍스트 메뉴를 좀더 직관적으로 알아볼 수
+  있게 변경하고, 터치 방식으로 기능을 변경
+  하였습니다.
+  
+<img width="209" src="https://user-images.githubusercontent.com/98198645/205235546-836c2b0c-872e-4aa3-9144-a92fa77f22d1.png">
+ <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130140586123264/ezgif.com-gif-maker_2.gif">  
+
+- 피드백  
+
+앱의 컬러가 통일이 안되어 있다.
+- 개선방안  
+
+전반적으로 모든 뷰에 메인컬러를 적절하게
+  넣어 통일성을 부여함.
+
+  
+<img width="200" src="https://user-images.githubusercontent.com/98198645/205235753-4da2ca78-56c3-408c-ad5d-deead1d823b7.png">
+ <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048134379035164672/ezgif.com-gif-maker.gif">  
+
+- 피드백  
+
+QR 탭바의 아이콘이 어떤 기능을 하는지
+  직관적으로 알기 어려웠다.
+  
+- 개선방안  
+
+QR 탭바의 아이콘을 변경, 그리고 텍스트를
+  추가하여 탭바의 기능을 사용자가 직관적으로
+  이해할 수 있게 수정하였습니다.
+  
+  
+<img width="200" src="https://user-images.githubusercontent.com/98198645/205236638-681839c5-dfd3-4d2e-94f6-497754cbc92e.png"> <img width="200" src="https://user-images.githubusercontent.com/98198645/205236464-9f26ec72-c174-4e33-9d5f-ab2acf8aacc0.png">  
+
+- 피드백  
+
+명함보관함이 그룹보다는 다른 방식으로
+  보여주는게 좋을 것 같다.
+
+  
+- 개선방안  
+
+그룹안에 명함이 리스트 방식으로 보이도록
+  개선하였습니다.
+
+  
+  
+<img width="197" src="https://user-images.githubusercontent.com/98198645/205236360-41ca1b22-87bc-4e93-9e0a-d89ded57c271.png"> <img width="200" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130139587883008/ezgif.com-gif-maker.gif"> 
 
 
 
