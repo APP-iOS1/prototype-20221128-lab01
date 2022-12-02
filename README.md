@@ -35,7 +35,7 @@
 
 ## 어떤 피드백을 받아 어떻게 개선했나?
 Before              After
-<img width="200" src="file:///var/folders/kw/n_sykm2s6c9b0knb2klnsq5w0000gn/T/TemporaryItems/NSIRD_screencaptureui_eIWyv1/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-12-02%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%203.57.37.png">
+<img width="209" src="https://user-images.githubusercontent.com/98198645/205234453-1fdaaddf-0f26-4542-9e25-594d1d3d9303.png"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130140019884052/ezgif.com-gif-maker_.gif"> 
 
 
 
