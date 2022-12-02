@@ -33,7 +33,11 @@
 ## 원래 무엇을 목표로 한 앱이었는가?
 - NFT의 메타데이터를 이용한 명함을 만들 수 있는 기능을 제공하고, 명함을 쉽게 저장/내보내는 기능을 제공하는 서비스
 
-## 스크린샷
+## 어떤 피드백을 받아 어떻게 개선했나?
+Before              After
+<img width="200" src="file:///var/folders/kw/n_sykm2s6c9b0knb2klnsq5w0000gn/T/TemporaryItems/NSIRD_screencaptureui_eIWyv1/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-12-02%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%203.57.37.png">
+
+
 
 ## 실제 MVP 구현을 위해 예상되는 도전과제 및 고민거리
 로그인 세션 유지
