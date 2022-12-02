@@ -43,7 +43,10 @@
 - 명함 크기를 키우고, 카드에 쉐딩을 주어
   더 명확하게 볼 수 있게 수정하였습니다.  
   
-<img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048142749808992307/ezgif.com-gif-maker_1_2.gif"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130140019884052/ezgif.com-gif-maker_.gif">  
+| <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048142749808992307/ezgif.com-gif-maker_1_2.gif"> | <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130140019884052/ezgif.com-gif-maker_.gif"> |
+| :----------------------------------------------------------: | :---------------------------------------------: |
+| Before | After |
+   
 
 * * *
 
@@ -57,8 +60,11 @@
 - 컨텍스트 메뉴를 좀더 직관적으로 알아볼 수
   있게 변경하고, 터치 방식으로 기능을 변경
   하였습니다.
-  
-<img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048142749460856872/ezgif.com-gif-maker_1_3.gif"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130140586123264/ezgif.com-gif-maker_2.gif">  
+ 
+| <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048142749460856872/ezgif.com-gif-maker_1_3.gif"> | <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130140586123264/ezgif.com-gif-maker_2.gif"> |
+| :----------------------------------------------------------: | :---------------------------------------------: |
+| Before | After |
+   
 
 * * *
 
@@ -71,7 +77,10 @@
   넣어 통일성을 부여함.
 
   
-<img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048142748710076426/ezgif.com-gif-maker_1.gif"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048134379035164672/ezgif.com-gif-maker.gif">  
+| <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048142748710076426/ezgif.com-gif-maker_1.gif"> | <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048134379035164672/ezgif.com-gif-maker.gif"> |
+| :----------------------------------------------------------: | :---------------------------------------------: |
+| Before | After |
+   
  
  * * *
 
@@ -86,8 +95,11 @@
   추가하여 탭바의 기능을 사용자가 직관적으로
   이해할 수 있게 수정하였습니다.
   
-  
-<img width="209" src="https://user-images.githubusercontent.com/98198645/205236638-681839c5-dfd3-4d2e-94f6-497754cbc92e.png"> <img width="209" src="https://user-images.githubusercontent.com/98198645/205236464-9f26ec72-c174-4e33-9d5f-ab2acf8aacc0.png">  
+
+| <img width="209" src="https://user-images.githubusercontent.com/98198645/205236638-681839c5-dfd3-4d2e-94f6-497754cbc92e.png"> | <img width="209" src="https://user-images.githubusercontent.com/98198645/205236464-9f26ec72-c174-4e33-9d5f-ab2acf8aacc0.png"> |
+| :----------------------------------------------------------: | :---------------------------------------------: |
+| Before | After |
+   
 
 * * *
 
