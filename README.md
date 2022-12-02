@@ -104,7 +104,7 @@
 
   
   
-<img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048142749108547584/ezgif.com-gif-maker_1_.gif"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130139587883008/ezgif.com-gif-maker.gif"> 
+<img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048146838726909982/ezgif.com-gif-maker_1.gif"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130139587883008/ezgif.com-gif-maker.gif"> 
 
 
 
