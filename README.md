@@ -36,14 +36,14 @@
 ## 어떤 피드백을 받아 어떻게 개선했나?
 피드백  
 
-- 명함의 크기가 작습니다.
-  
+- 명함의 크기가 작습니다.  
+
 개선방안  
 
 - 명함 크기를 키우고, 카드에 쉐딩을 주어
   더 명확하게 볼 수 있게 수정하였습니다.  
   
-<img width="209" src="https://user-images.githubusercontent.com/98198645/205234453-1fdaaddf-0f26-4542-9e25-594d1d3d9303.png"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130140019884052/ezgif.com-gif-maker_.gif">  
+<img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048142749808992307/ezgif.com-gif-maker_1_2.gif"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130140019884052/ezgif.com-gif-maker_.gif">  
 
 * * *
 
@@ -58,21 +58,20 @@
   있게 변경하고, 터치 방식으로 기능을 변경
   하였습니다.
   
-<img width="209" src="https://user-images.githubusercontent.com/98198645/205235546-836c2b0c-872e-4aa3-9144-a92fa77f22d1.png"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130140586123264/ezgif.com-gif-maker_2.gif">  
+<img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048142749460856872/ezgif.com-gif-maker_1_3.gif"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130140586123264/ezgif.com-gif-maker_2.gif">  
 
 * * *
 
 피드백  
 
 - 앱의 컬러가 통일이 안되어 있다.
-
 개선방안  
 
 - 전반적으로 모든 뷰에 메인컬러를 적절하게
   넣어 통일성을 부여함.
 
   
-<img width="200" src="https://user-images.githubusercontent.com/98198645/205235753-4da2ca78-56c3-408c-ad5d-deead1d823b7.png"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048134379035164672/ezgif.com-gif-maker.gif">  
+<img width="200" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048142748710076426/ezgif.com-gif-maker_1.gif"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048134379035164672/ezgif.com-gif-maker.gif">  
  
  * * *
 
@@ -105,7 +104,7 @@
 
   
   
-<img width="197" src="https://user-images.githubusercontent.com/98198645/205236360-41ca1b22-87bc-4e93-9e0a-d89ded57c271.png"> <img width="200" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130139587883008/ezgif.com-gif-maker.gif"> 
+<img width="197" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048142749108547584/ezgif.com-gif-maker_1_.gif"> <img width="200" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130139587883008/ezgif.com-gif-maker.gif"> 
 
 
 
