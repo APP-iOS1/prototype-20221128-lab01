@@ -20,6 +20,7 @@ struct SnapCarousel<Content: View, T: Identifiable>: View {
     @Binding var index: Int
     
     // MARK: - spacing 15 -> 35 , trailingSpace 100 -> 115
+    // 카드 간격 spacing
     init(spacing: CGFloat = 60, trailingSpace: CGFloat = 115, index: Binding<Int>, items:[T], @ViewBuilder content: @escaping (T) -> Content){
         
         self.list = items
