@@ -1,5 +1,4 @@
-# <img width="70" src="https://mintspace-media.fra1.digitaloceanspaces.com/wp-content/uploads/2021/12/26102910/IMG_20211226_142829.jpg">
-# Cherry(체리)
+# <img width="70" src="https://mintspace-media.fra1.digitaloceanspaces.com/wp-content/uploads/2021/12/26102910/IMG_20211226_142829.jpg">  Cherry(체리)
 
 ## 앱 정의(ADS)
 블록체인과 연동하여 NFT의 메타데이터를 이용, 명함을 커스터마이즈 하고 공유할 수 있는 어플입니다.
