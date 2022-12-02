@@ -16,6 +16,7 @@ struct CardEditButtExpandingView: View {
     var body: some View {
         ZStack {
             ZStack {
+
                 Button {
                     switch direction {
                     case .bottom:
@@ -44,6 +45,7 @@ struct CardEditButtExpandingView: View {
             .scaleEffect(self.expand ? 1 : 0.5)
             .offset(x: self.expand ? self.direction.offsets.0 : 0, y: self.expand ? self.direction.offsets.1 : 0)
             .rotationEffect(self.expand ? .degrees(43) : .degrees(0))
+
             .animation(Animation.easeOut(duration: 0.25).delay(0.05), value: expand)
         }
         .offset(x: self.direction.containerOffset.0, y: self.direction.containerOffset.1)

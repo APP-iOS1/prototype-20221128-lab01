@@ -17,6 +17,7 @@ struct Home: View {
     @State var isShowingDetailSheet: Bool = false
     @State var isShowingDeleteAlert: Bool = false
     
+
     // 카드 디테일 버튼 동작 애니메이션
     @State var animate: Bool = false
     
@@ -33,43 +34,23 @@ struct Home: View {
     @State private var imageArr: [String] = ["NFTcard1", "NFTcard2", "NFTcard3", "NFTcard4"]
     
     var body: some View {
-        
-        NavigationView {
-            ZStack {
-                backgroundColor
-                    .opacity(0.5)
-//                TabView(selection: $currentIndex) {
-//                    ForEach(posts.indices, id: \.self) { index in
-//                        GeometryReader { proxy in
-//                            Image(posts[index].frontImg)
-//                                .resizable()
-//                                .aspectRatio(contentMode: .fill)
-//                                .frame(width: proxy.size.width, height: proxy.size.height)
-//                                .cornerRadius(1)
-//                        }
-//                        .ignoresSafeArea()
-//                        .offset(y: -100)
-//                    }
-//                }
-//                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-//                .animation(.easeInOut, value: currentIndex)
-//                .overlay(
-//
-//                    LinearGradient(colors: [
-//
-//                        Color.clear,
-//                        Color.black.opacity(0.2),
-//                        Color.white.opacity(0.4),
-//                        Color.white,
-//                        Color.white,
-//                        Color.white,
-//                    ], startPoint: .top, endPoint: .bottom)
-//                )
-//                .ignoresSafeArea()
-                
-                //posts..
-                SnapCarousel(trailingSpace: getRect().height < 750 ? 100 : 150 ,index: $currentIndex, items: posts) { post in
+            NavigationView {
+                ZStack {
                     
+                    Image("HomeImage")
+                        .resizable()
+                        .ignoresSafeArea(.all)
+
+               
+                    
+                    //posts..
+                    SnapCarousel(trailingSpace: getRect().height < 750 ? 100 : 150 ,index: $currentIndex, items: posts) { post in
+                        
+                        CardView(post: post)
+                            .onAppear {
+                                setAverageColor(image: imageArr)
+                            }
+         
                     CardView(post: post)
                         .onAppear {
                             setAverageColor(image: imageArr)
@@ -79,9 +60,7 @@ struct Home: View {
                 }
                 .offset(y: getRect().height / 4)
                 
-                //
-                //                TopItemView(isShowingCamera: $isShowingCamera, isShowingSheet: $isShowingSheet)
-                //                    .position(x:200,y:10)
+            
                 HStack{
                     NavigationLink(destination: ChoiceNameCardTypeView(firstNaviLinkActive: $firstNaviLinkActive), isActive: $firstNaviLinkActive)
                     {
@@ -89,18 +68,31 @@ struct Home: View {
                             .resizable()
                             .frame(width:50, height: 50)
                     }
+                    .offset(y: getRect().height / 4)
+                    
+                    //
+                    //                TopItemView(isShowingCamera: $isShowingCamera, isShowingSheet: $isShowingSheet)
+                    //                    .position(x:200,y:10)
+                    HStack{
+                        NavigationLink(destination: ChoiceNameCardTypeView(firstNaviLinkActive: $firstNaviLinkActive), isActive: $firstNaviLinkActive)
+                        {
+                            Image(systemName: "plus")
+                                .resizable()
+                                .frame(width:40, height: 40)
+                        }
+                        
+                    }
+                    .padding(20)
+                    .offset(x:150, y:300)
                     
                 }
-                .padding(20)
-                .offset(x:150, y:300)
+                .sheet(isPresented: $isShowingSheet,onDismiss: didDismiss) {
+                    MyMenuView(isShowingSheet: $isShowingSheet)
+                }
+                .sheet(isPresented: $isShowingCamera,onDismiss: didDismiss) {
+                    CameraQRView(isShowingCamera: $isShowingCamera)
+                }
             }
-            .sheet(isPresented: $isShowingSheet,onDismiss: didDismiss) {
-                MyMenuView(isShowingSheet: $isShowingSheet)
-            }
-            .sheet(isPresented: $isShowingCamera,onDismiss: didDismiss) {
-                CameraQRView(isShowingCamera: $isShowingCamera)
-        }
-        }
         
         
         
@@ -109,13 +101,27 @@ struct Home: View {
     func CardView(post: Post) -> some View {
         
         ZStack {
-            
+
             //CardButtonView()
             GeometryReader { proxy in
                 
                 CardFlipView(frontImage:post.frontImg, backImage: post.backImg, width: proxy.size.width/1.0, height: proxy.size.height/1.0)
                     .frame(width: proxy.size.width, height: proxy.size.height / 4)
                     .shadow(radius: 10)
+
+                    
+            }
+            .offset(y: 100)
+
+            
+            // MARK: context menu가 담긴 버튼
+            
+            CardEditButtonView(isAnimating: $detailButtonActivate)
+                .shadow(radius: 10)
+                .offset(y: 50)
+                
+                
+
                     
             }
             

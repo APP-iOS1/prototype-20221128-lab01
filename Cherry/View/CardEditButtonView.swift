@@ -23,7 +23,8 @@ struct CardEditButtonView: View {
                 
                 Image(systemName: "plus")
                     .font(.system(size: 30, weight:  self.isAnimating ? .regular : .semibold, design: .rounded))
-                    .foregroundColor(self.isAnimating ? Color.white : Color.black)
+                    .foregroundColor(self.isAnimating ? Color.white : Color.gray)
+
                     .rotationEffect(self.isAnimating ? .degrees(45) : .degrees(0))
                     .scaleEffect(self.isAnimating ? 3 : 1)
                     .opacity(self.isAnimating ? 0.5 : 1)
@@ -31,11 +32,12 @@ struct CardEditButtonView: View {
                     .onTapGesture {
                         self.isAnimating.toggle()
                     }
-                    
+
             }
             .frame(height: 200)
             
         }
+    
         
     }
     
@@ -43,6 +45,7 @@ struct CardEditButtonView: View {
 
 struct AddButton_Previews: PreviewProvider {
     static var previews: some View {
+
         CardEditButtonView(isAnimating: .constant(true))
     }
 }
