@@ -23,7 +23,9 @@ struct ChoiceFrontInfo_SinglePage: View {
     
     
     var body: some View {
+
         ScrollView {
+
             VStack{
                 HStack{
                     Text("이미지 선택")
@@ -35,6 +37,7 @@ struct ChoiceFrontInfo_SinglePage: View {
                     }
                 }
                 .padding()
+
                 
                 VStack{
                     if(imageUrl == ""){
@@ -48,7 +51,7 @@ struct ChoiceFrontInfo_SinglePage: View {
                             VStack{
                                 image
                                     .resizable()
-                                    .aspectRatio(contentMode: .fill)
+                                    .aspectRatio(contentMode: .fit)
                             }
                         }placeholder: {
                             ProgressView()
@@ -110,6 +113,7 @@ struct ChoiceFrontInfo_SinglePage: View {
             NavigationLink("다음", destination: FinalStep_SinglePageView(nftCollectionName: $nftCollectionName, nftName: $nftName, nftNumber: $nftNumber, imageUrl: $imageUrl, frontTemplateType: frontTemplateType, firstNaviLinkActive: $firstNaviLinkActive))
         }
         
+
     }
 }
 struct ChoiceFrontInfoView_Previews: PreviewProvider{

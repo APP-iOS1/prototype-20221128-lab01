@@ -52,35 +52,34 @@ struct FrontTemplate1: View {
                 
             }
             Spacer()
-            HStack{
-                Spacer()
-                VStack{
+            VStack{
+                
+                HStack{
                     Spacer()
-                    HStack{
-                        Text(nftName)
-                            .font(.title3)
-                            .fontWeight(.bold)
-                            .multilineTextAlignment(.trailing)
-                            .modifier(FittingFontSizeModifier())
-                    }
-                    HStack{
-                        Spacer()
-                        Text(nftNumber)
-                            .font(.title3)
-                            .fontWeight(.bold)
-                            .multilineTextAlignment(.trailing)
-                            .modifier(FittingFontSizeModifier())
-                    }
-                    
-                    HStack{
-                        Spacer()
-                        Image("QRImage")
-                            .resizable()
-                            .frame(width: 75, height: 75)
-                    }
+                    Text(nftName)
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.trailing)
+                        .modifier(FittingFontSizeModifier())
+                }
+                HStack{
+                    Spacer()
+                    Text(nftNumber)
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.trailing)
+                        .modifier(FittingFontSizeModifier())
                 }
                 
+                HStack{
+                    Spacer()
+                    Image("QRImage")
+                        .resizable()
+                        .frame(width: 75, height: 75)
+                }
             }
+            
+            
             Spacer()
         }.frame(width: 250, height: 450)
     }

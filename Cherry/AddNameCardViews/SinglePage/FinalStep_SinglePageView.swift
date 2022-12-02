@@ -22,7 +22,7 @@ struct FinalStep_SinglePageView: View {
             if frontTemplateType == 1{
                 FrontTemplate1(nftCollectionName: $nftCollectionName, nftName: $nftName, nftNumber: $nftNumber, imageUrl: $imageUrl).border(.black)
             }else if frontTemplateType == 2{
-                FrontTemplate2(nftCollectionName: $nftCollectionName, nftName: $nftName, nftNumber: $nftNumber, imageUrl: $imageUrl)
+                FrontTemplate2(nftCollectionName: $nftCollectionName, nftName: $nftName, nftNumber: $nftNumber, imageUrl: $imageUrl).border(.black)
             }else{
                 
             }
@@ -41,3 +41,8 @@ struct FinalStep_SinglePageView: View {
     }
 }
 
+struct FinalStep_SinglePagePreview: PreviewProvider{
+    static var previews: some View{
+        FinalStep_SinglePageView(nftCollectionName: .constant(""), nftName: .constant(""), nftNumber: .constant(""), imageUrl: .constant("https://cdn.discordapp.com/attachments/1043032747112923166/1047750623799558164/unknown.png"), frontTemplateType: 1, firstNaviLinkActive: .constant(false))
+    }
+}

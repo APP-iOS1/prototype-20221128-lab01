@@ -14,42 +14,54 @@ struct FrontTemplate2: View {
     
     var body: some View {
         VStack{
-            AsyncImage(url:URL(string: imageUrl)!){ image in
-                VStack{
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                }.padding(0)
-            }placeholder: {
-                ProgressView()
-            }.padding(0)
-                .frame(height:.infinity)
             
+            Spacer()
             HStack{
                 Spacer()
                 VStack{
-                    
-                    Text(nftCollectionName)
-                        .multilineTextAlignment(.trailing)
-                        .font(.largeTitle)
+                    HStack{
+                        Spacer()
+                        Text(nftCollectionName)
+                            .font(.largeTitle)
+                    }
                     //.position(x: 150, y:450)
-                    Text(nftName)
-                        .multilineTextAlignment(.trailing)
-                        .font(.title2)
+                    HStack{
+                        Spacer()
+                        Text(nftName)
+                            .multilineTextAlignment(.trailing)
+                            .font(.title2)
+                    }
                     //.position(x: 150, y:480)
-                    Text(nftNumber)
-                        .multilineTextAlignment(.trailing)
-                        .font(.title2)
+                    HStack{
+                        Spacer()
+                        Text(nftNumber)
+                            .multilineTextAlignment(.trailing)
+                            .font(.title2)
+                    }
                     //.position(x: 150, y:500)
-                    Image("QRImage")
-                        .resizable()
-                        .frame(width: 75, height: 75)
+                    HStack{
+                        Spacer()
+                        Image("QRImage")
+                            .resizable()
+                            .frame(width: 35, height: 35)
+                    }
                     //.position(x:260, y: 550)
                 }
             }
                 
             
         }.frame(width: 250, height: 400)
+            .background(
+                AsyncImage(url:URL(string: imageUrl)!){ image in
+                    VStack{
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    }.padding(0)
+                }placeholder: {
+                    ProgressView()
+                }
+            ).clipped()
     }
 }
 
