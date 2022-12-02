@@ -17,7 +17,7 @@ struct CardCollection: View {
     
     var body: some View {
         VStack {
-            NavigationStack {
+//            NavigationStack {
             HStack {
                 Text("Card Collection")
                     .font(.largeTitle)
@@ -59,13 +59,15 @@ struct CardCollection: View {
                         }
                     }
                 }
-            }
+//            }
         }
     }
 }
 
 struct CardCollection_Previews: PreviewProvider {
     static var previews: some View {
-        CardCollection()
+        NavigationStack {
+            CardCollection()
+        }
     }
 }
