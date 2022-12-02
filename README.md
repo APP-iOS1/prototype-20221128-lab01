@@ -102,7 +102,7 @@
 - 그룹안에 명함이 리스트 방식으로 보이도록
   개선하였습니다.
 
-<img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048146838726909982/ezgif.com-gif-maker_1.gif"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130139587883008/ezgif.com-gif-maker.gif"> 
+<img width="209" src="https://user-images.githubusercontent.com/98198645/205245562-1b60ae09-a1a3-4bd4-829f-f07158d58f81.mov"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130139587883008/ezgif.com-gif-maker.gif"> 
 
 
 
