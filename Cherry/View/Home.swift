@@ -17,7 +17,7 @@ struct Home: View {
     @State var isShowingDetailSheet: Bool = false
     @State var isShowingDeleteAlert: Bool = false
     
-
+    
     // 카드 디테일 버튼 동작 애니메이션
     @State var animate: Bool = false
     
@@ -29,46 +29,36 @@ struct Home: View {
     // 정상적인 방법은 setAverageColor()가 string([string] x) 값을 받아 backgroundColor를 바꿔줘야 한다
     // currentIndex에 맞춰서 색이 변해야 하는데 안됨. snapCarousel 파일을 이해 못 해서 그런 듯
     @State private var backgroundColor: Color = .clear
-        
+    
     // 임시방편 averageColor 버전 근데 이것도 안됨
     @State private var imageArr: [String] = ["NFTcard1", "NFTcard2", "NFTcard3", "NFTcard4"]
     
     var body: some View {
-            NavigationView {
-                ZStack {
+        NavigationView {
+            ZStack {
+                
+                Image("HomeImage")
+                    .resizable()
+                    .ignoresSafeArea(.all)
+                
+                
+                
+                //posts..
+                SnapCarousel(trailingSpace: getRect().height < 750 ? 100 : 150 ,index: $currentIndex, items: posts) { post in
                     
-                    Image("HomeImage")
-                        .resizable()
-                        .ignoresSafeArea(.all)
-
-               
-                    
-                    //posts..
-                    SnapCarousel(trailingSpace: getRect().height < 750 ? 100 : 150 ,index: $currentIndex, items: posts) { post in
-                        
-                        CardView(post: post)
-                            .onAppear {
-                                setAverageColor(image: imageArr)
-                            }
-         
                     CardView(post: post)
                         .onAppear {
                             setAverageColor(image: imageArr)
                         }
-                        
+                    
+                    
                     
                 }
                 .offset(y: getRect().height / 4)
                 
-            
+                
                 HStack{
-                    NavigationLink(destination: ChoiceNameCardTypeView(firstNaviLinkActive: $firstNaviLinkActive), isActive: $firstNaviLinkActive)
-                    {
-                        Image(systemName: "plus.circle")
-                            .resizable()
-                            .frame(width:50, height: 50)
-                    }
-                    .offset(y: getRect().height / 4)
+                    
                     
                     //
                     //                TopItemView(isShowingCamera: $isShowingCamera, isShowingSheet: $isShowingSheet)
@@ -93,44 +83,40 @@ struct Home: View {
                     CameraQRView(isShowingCamera: $isShowingCamera)
                 }
             }
-        
-        
+            
+            
+            
+        }
         
     }
     @ViewBuilder
     func CardView(post: Post) -> some View {
         
         ZStack {
-
+            
             //CardButtonView()
             GeometryReader { proxy in
                 
                 CardFlipView(frontImage:post.frontImg, backImage: post.backImg, width: proxy.size.width/1.0, height: proxy.size.height/1.0)
                     .frame(width: proxy.size.width, height: proxy.size.height / 4)
                     .shadow(radius: 10)
-
-                    
+                
+                
             }
             .offset(y: 100)
-
+            
             
             // MARK: context menu가 담긴 버튼
             
             CardEditButtonView(isAnimating: $detailButtonActivate)
                 .shadow(radius: 10)
                 .offset(y: 50)
-                
-                
-
-                    
-            }
             
-            // MARK: context menu가 담긴 버튼
             
-            CardEditButtonView(isAnimating: $detailButtonActivate)
-                .shadow(radius: 10)
-                
+            
+            
         }
+        
         
         .sheet(isPresented: $isShowingDetailSheet) {
             DetailView()
@@ -147,7 +133,6 @@ struct Home: View {
         let uiColor = UIImage(named: image[currentIndex])?.averageColor ?? .clear
         backgroundColor = Color(uiColor)
     }
-    
 }
 
 struct Home_Previews: PreviewProvider {
@@ -164,3 +149,5 @@ extension View {
         return UIScreen.main.bounds
     }
 }
+
+
