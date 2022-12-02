@@ -1,20 +1,19 @@
-//
-//  MyProfileView.swift
-//  Cherry
-//
-//  Created by 전근섭 on 2022/11/29.
-//
-
 import SwiftUI
 import PhotosUI
 
 struct MyProfileView: View {
+    let walletInfo: WalletInfo = WalletInfo.shared
     
+    @State var imageUrls: [String] = []
     @State var selectedPage = "Wallet Activities"
-//    var pages = ["Wallet Activities", "NFTs"]
+    //    var pages = ["Wallet Activities", "NFTs"]
     
     @State private var selectedItem: PhotosPickerItem? = nil
     @State private var selectedImageData: Data? = nil
+    
+    
+    
+    
     
     var body: some View {
         VStack {
@@ -66,7 +65,7 @@ struct MyProfileView: View {
                             }
                         }
                     }
-                         
+                
                 
                 VStack(alignment: .leading, spacing: 5) {
                     Text("EN ❤️ LGC")
@@ -92,32 +91,49 @@ struct MyProfileView: View {
                 Text("트위터 주소 등등")
             }
             .padding()
-            
+            ProfilePickerView2()
             VStack {
-                ProfilePickerView2()
-//                Picker("Choose a page", selection: $selectedPage) {
-//                    ForEach(pages, id: \.self) {
-//                        Text($0)
-//
-//                    }
-//                }
-//                .pickerStyle(.segmented)
-//
-//                switch selectedPage {
-//                case "Wallet Activities" :
-//                    ProfilePickerView1()
-//                case "NFTs" :
-//                    ProfilePickerView2()
-//                default:
-//                    ProfilePickerView1()
-//                }
+                ScrollView {
+                    LazyVGrid(columns: Array(repeating: GridItem(), count: 3)) {
+                        ForEach(imageUrls, id:\.self) { imageUrl in
+                            AsyncImage(url: URL(string:imageUrl)!){ image in
+                                VStack{
+                                    image
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                }
+                                
+                            }placeholder: {
+                                VStack{
+                                    Image(systemName: "photo")
+                                        .imageScale(.large)
+                                        .frame(width: 110, height: 110)
+                                    
+                                    Text("image broken")
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+                
+                
                 
             }
             
             Spacer()
         }
+        .onAppear{
+            if self.imageUrls.isEmpty{
+                for metadata in walletInfo.metadatas{
+                    imageUrls.append(metadata["image"] as! String)
+                }
+            }
+            
+        }
         .padding(10)
     }
+    
 }
 
 struct MyProfileView_Previews: PreviewProvider {

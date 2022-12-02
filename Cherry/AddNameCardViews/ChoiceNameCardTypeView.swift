@@ -22,7 +22,7 @@ struct ChoiceNameCardTypeView: View {
                     Image("NFTcard1")
                         .resizable()
                         .frame(width: 100, height: 200)
-                    NavigationLink("선택", destination: ChoiceFrontNamecardView(firstNaviLinkActive: $firstNaviLinkActive))
+                    NavigationLink("선택", destination: ChoiceFrontNamecard_SinglePage(firstNaviLinkActive: $firstNaviLinkActive))
                 }
                 Spacer()
                 VStack{
@@ -35,7 +35,7 @@ struct ChoiceNameCardTypeView: View {
                             .resizable()
                             .frame(width: 100, height: 200)
                     }
-                    NavigationLink("선택", destination: Multi_ChoiceFrontNamecardView(firstNaviLinkActive: $firstNaviLinkActive))
+                    NavigationLink("선택", destination: ChoiceFrontNamecard_MultiPage(firstNaviLinkActive: $firstNaviLinkActive))
                 }
                 Spacer()
             }

@@ -1,13 +1,13 @@
 //
-//  ChoiceFrontNamecardView.swift
+//  ChoiceFrontNamecard_MultiPage.swift
 //  Cherry
 //
-//  Created by mac on 2022/11/29.
+//  Created by mac on 2022/12/02.
 //
 
 import SwiftUI
 
-struct ChoiceFrontNamecardView: View {
+struct ChoiceFrontNamecard_MultiPage: View {
     @Binding var firstNaviLinkActive: Bool
     //어떤 템플릿을 선택했는지에 따라서
     //ChoiceFrontOnlyImageView와 ChoiceFrontImageNTextView로 나뉘
@@ -23,7 +23,7 @@ struct ChoiceFrontNamecardView: View {
                     Image("NFTcard1")
                         .resizable()
                         .frame(width: 150, height: 250)
-                    NavigationLink("선택", destination: ChoiceFrontImageNTextView(firstNaviLinkActive: $firstNaviLinkActive))
+                    NavigationLink("선택", destination: ChoiceFrontInfo_MultiPageView(frontTemplateType: 1, firstNaviLinkActive: $firstNaviLinkActive))
                             
                     
                     
@@ -35,17 +35,11 @@ struct ChoiceFrontNamecardView: View {
                         .resizable()
                         .frame(width: 150, height: 250)
                     
-                    NavigationLink("선택", destination: ChoiceFrontOnlyImageView(firstNaviLinkActive: $firstNaviLinkActive))
+                    NavigationLink("선택", destination: ChoiceFrontInfo_MultiPageView(frontTemplateType: 2, firstNaviLinkActive: $firstNaviLinkActive))
                         
                 }
                 Spacer()
             }.padding(20)
         }
-    }
-}
-
-struct ChoiceFrontNamecardView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChoiceFrontNamecardView(firstNaviLinkActive: .constant(true))
     }
 }
