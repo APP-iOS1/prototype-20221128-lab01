@@ -11,6 +11,7 @@ struct CardCollection: View {
     
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
     var arr: [String] = ["모두보기", "그룹1", "그룹2", "그룹3"]
+    var arrImage: [String] = ["group1", "group2", "group3", "group4", "group5", "group6", "group7", "group8","group9"]
     
     @State private var searchText = ""
     
@@ -20,21 +21,21 @@ struct CardCollection: View {
             HStack {
                 Text("Card Collection")
                     .font(.largeTitle)
-                
+                    .bold()
+                    .foregroundColor(Color("MainColor"))
                 Spacer()
                 Button {
                     
                 } label: {
                     Image(systemName: "plus")
                         .font(.largeTitle)
-                        .foregroundColor(Color.black)
-                    
+                        .foregroundColor(Color("MainColor"))
+
                 }
                 
             }
             .padding()
-            .background(Color("MainColor"))
-            
+                
             SearchBar(text: $searchText)
                 .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
             
@@ -43,14 +44,16 @@ struct CardCollection: View {
                         
                         ForEach(arr.filter{$0.contains(searchText) || searchText == ""}, id: \.self) { post in
                             
-                            NavigationLink(destination: MyView(), label: {
+                            NavigationLink(destination: CardGroupDetail(), label: {
                                 
                                 VStack(spacing: 0.1) {
-                                    Color(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1))
-                                        .cornerRadius(15)
-                                        .frame(width: 170, height: 170)
-                                        .padding()
+                                    Image(arrImage.randomElement()!)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .cornerRadius(30)
+                                        .padding(10)
                                     Text("\(post)")
+                                        .font(.headline)
                                 }
                             })
                         }

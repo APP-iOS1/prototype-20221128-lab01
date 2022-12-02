@@ -22,13 +22,16 @@ struct ContentView: View {
         TabView(selection: $tabSelection) {
             MyView().tabItem {
                 Image(systemName: "person.crop.rectangle.stack")
+                Text("내명함")
             }.tag(1)
             UsersView().tabItem {
                 Image(systemName: "person.2.crop.square.stack")
+                Text("명함수집함")
             }.tag(2)
             
             AddView().tabItem {
                 Image(systemName: "qrcode.viewfinder")
+                Text("QR")
             }.tag(3)
     
             TempView().tabItem {
@@ -39,6 +42,8 @@ struct ContentView: View {
             
             MyPageView().tabItem {
                 Image(systemName: "person.crop.circle")
+                Text("마이페이지")
+
             }.tag(5)
  
         }.navigationBarHidden(true)

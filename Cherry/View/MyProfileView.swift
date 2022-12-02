@@ -18,8 +18,10 @@ struct MyProfileView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("MY")
-                    .font(.system(size: 45))
+                Text("My Page")
+                    .font(.largeTitle)
+                    .bold()
+                    .foregroundColor(Color("MainColor"))
                 
                 Spacer()
                 
