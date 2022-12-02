@@ -71,7 +71,7 @@
   넣어 통일성을 부여함.
 
   
-<img width="200" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048142748710076426/ezgif.com-gif-maker_1.gif"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048134379035164672/ezgif.com-gif-maker.gif">  
+<img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048142748710076426/ezgif.com-gif-maker_1.gif"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048134379035164672/ezgif.com-gif-maker.gif">  
  
  * * *
 
@@ -87,7 +87,7 @@
   이해할 수 있게 수정하였습니다.
   
   
-<img width="200" src="https://user-images.githubusercontent.com/98198645/205236638-681839c5-dfd3-4d2e-94f6-497754cbc92e.png"> <img width="200" src="https://user-images.githubusercontent.com/98198645/205236464-9f26ec72-c174-4e33-9d5f-ab2acf8aacc0.png">  
+<img width="209" src="https://user-images.githubusercontent.com/98198645/205236638-681839c5-dfd3-4d2e-94f6-497754cbc92e.png"> <img width="209" src="https://user-images.githubusercontent.com/98198645/205236464-9f26ec72-c174-4e33-9d5f-ab2acf8aacc0.png">  
 
 * * *
 
@@ -104,7 +104,7 @@
 
   
   
-<img width="197" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048142749108547584/ezgif.com-gif-maker_1_.gif"> <img width="200" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130139587883008/ezgif.com-gif-maker.gif"> 
+<img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048142749108547584/ezgif.com-gif-maker_1_.gif"> <img width="209" src="https://cdn.discordapp.com/attachments/1043032747112923166/1048130139587883008/ezgif.com-gif-maker.gif"> 
 
 
 
